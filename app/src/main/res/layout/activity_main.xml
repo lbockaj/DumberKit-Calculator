@@ -127,4 +127,12 @@
         app:tabRippleColor="@null" />
 
     </LinearLayout>
+
+    <!-- hold *: the palette of symbols over the whole screen -->
+    <org.fossify.math.views.SymbolPalette
+        android:id="@+id/symbol_palette"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="8dp"
+        android:visibility="gone" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

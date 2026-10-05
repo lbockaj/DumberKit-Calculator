@@ -3,14 +3,9 @@
     <string name="dpad_calculator_empty">Napíš príklad na klávesnici. Tu sa budú zobrazovať tvoje výpočty.</string>
     <string name="dpad_error_invalid">Neúplný príklad</string>
     <string name="dpad_error_too_big">Príliš veľké číslo</string>
-    <string name="dpad_more_functions">Ďalšie funkcie (podrž *)</string>
+    <string name="dpad_more_functions">Znamienka a funkcie (podrž *)</string>
     <string name="dpad_clear_history">Vymazať históriu</string>
     <string name="dpad_clear_history_question">Vymazať všetky výpočty z histórie?</string>
-    <string name="dpad_function_percent">%  Percentá</string>
-    <string name="dpad_function_power">^  Mocnina</string>
-    <string name="dpad_function_root">√  Odmocnina</string>
-    <string name="dpad_function_open_parenthesis">(  Otvoriť zátvorku</string>
-    <string name="dpad_function_close_parenthesis">)  Zatvoriť zátvorku</string>
     <string name="dpad_function_sign">±  Záporné číslo</string>
     <string name="dpad_hint_converter">←/→ jednotka · OK zoznam · * vymeniť · # čiarka</string>
     <string name="dpad_clear_value">Vymazať hodnotu</string>
@@ -28,7 +23,7 @@
     <string name="dpad_key_star_hold">Podržať *</string>
     <string name="dpad_key_calc_digits_action">Písanie čísel</string>
     <string name="dpad_key_calc_star_action">Pridá +, ďalšie stlačenie −, ×, ÷ (na začiatku: záporné číslo)</string>
-    <string name="dpad_key_calc_star_hold_action">%, mocnina, odmocnina, zátvorky, ±</string>
+    <string name="dpad_key_calc_star_hold_action">Paleta znamienok rozložená ako klávesnica: číslica na mieste znamienka (alebo OK) ho vloží</string>
     <string name="dpad_key_calc_pound_action">Desatinná čiarka</string>
     <string name="dpad_key_calc_ok_action">Výsledok</string>
     <string name="dpad_key_calc_back_action">Zmaže posledný znak (výsledok celý); keď nie je nič napísané: zavrie</string>

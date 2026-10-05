@@ -34,6 +34,7 @@ import org.fossify.math.R
 import org.fossify.math.adapters.HistoryAdapter
 import org.fossify.math.databases.CalculatorDatabase
 import org.fossify.math.databinding.ActivityMainBinding
+import org.fossify.math.views.SymbolPalette
 import org.fossify.math.extensions.calculatorDB
 import org.fossify.math.extensions.config
 import org.fossify.math.helpers.CalculatorInput
@@ -256,6 +257,10 @@ class MainActivity : SimpleActivity() {
         // popups and dialogs open on key up: one opened on key down would get the key up and stop reacting to keys
         val isUp = event.action == KeyEvent.ACTION_UP && !event.isCanceled
 
+        if (binding.symbolPalette.isShowing) {
+            return binding.symbolPalette.onKey(event)
+        }
+
         if (event.keyCode == KeyEvent.KEYCODE_DPAD_LEFT || event.keyCode == KeyEvent.KEYCODE_DPAD_RIGHT) {
             if (isFirstDown) switchTab(if (event.keyCode == KeyEvent.KEYCODE_DPAD_LEFT) -1 else 1)
             return true
@@ -281,8 +286,12 @@ class MainActivity : SimpleActivity() {
 
             KeyEvent.KEYCODE_STAR -> when {
                 isFirstDown -> starHeld = false
-                isDown && !starHeld -> starHeld = true
-                isUp -> if (starHeld) showMoreFunctions() else edit { input.rotateOperator() }
+                // the palette shows up while '*' is still held (it ignores that press letting go)
+                isDown && !starHeld -> {
+                    starHeld = true
+                    showMoreFunctions()
+                }
+                isUp && !starHeld -> edit { input.rotateOperator() }
             }
 
             KeyEvent.KEYCODE_BACK -> when {
@@ -472,25 +481,24 @@ class MainActivity : SimpleActivity() {
         }
     }
 
-    /** Hold '*': the functions that don't fit on the keypad. */
+    /** Hold '*': all operators and functions as square tiles laid out like the keypad, picked by digit or OK. */
     private fun showMoreFunctions() {
-        val functions = listOf(
-            R.string.dpad_function_percent to { input.percent() },
-            R.string.dpad_function_power to { input.power() },
-            R.string.dpad_function_root to { input.root() },
-            R.string.dpad_function_open_parenthesis to { input.openParenthesis() },
-            R.string.dpad_function_close_parenthesis to { input.closeParenthesis() },
-            R.string.dpad_function_sign to { input.toggleSign() }
+        val symbols = listOf(
+            SymbolPalette.Symbol("+", 1) { input.typeOperator(ExpressionEvaluator.PLUS) },
+            SymbolPalette.Symbol("−", 2) { input.typeOperator(ExpressionEvaluator.MINUS) },
+            SymbolPalette.Symbol("×", 3) { input.typeOperator(ExpressionEvaluator.TIMES) },
+            SymbolPalette.Symbol("÷", 4) { input.typeOperator(ExpressionEvaluator.DIVIDE) },
+            SymbolPalette.Symbol("^", 5) { input.power() },
+            SymbolPalette.Symbol("√", 6) { input.root() },
+            SymbolPalette.Symbol("(", 7) { input.openParenthesis() },
+            SymbolPalette.Symbol(")", 8) { input.closeParenthesis() },
+            SymbolPalette.Symbol("%", 9) { input.percent() },
+            SymbolPalette.Symbol("±", 0) { input.toggleSign() }
         )
-
-        dpadPopupMenu(binding.mainToolbar).apply {
-            functions.forEachIndexed { index, (title, _) -> menu.add(0, index, index, title) }
-            setOnMenuItemClickListener {
-                edit { functions[it.itemId].second() }
-                true
-            }
-            show()
+        if (currentTab != TAB_CALCULATOR) {
+            showTab(TAB_CALCULATOR)
         }
+        binding.symbolPalette.show(symbols) { edit { it.action() } }
     }
 
     /** The result shown after OK, or what the calculation typed so far gives. */

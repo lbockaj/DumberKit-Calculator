@@ -13,6 +13,9 @@
     <dimen name="dpad_hint_text_size">12sp</dimen>
     <dimen name="dpad_history_formula_size">14sp</dimen>
     <dimen name="dpad_history_result_size">17sp</dimen>
+    <!-- hold *: the square tiles of the symbol palette -->
+    <dimen name="dpad_palette_tile_size">64dp</dimen>
+    <dimen name="dpad_palette_tile_margin">4dp</dimen>
     <!-- bottom bar of the tabs, icons only -->
     <dimen name="dpad_tabs_height">36dp</dimen>
     <dimen name="dpad_tab_icon_size">22dp</dimen>

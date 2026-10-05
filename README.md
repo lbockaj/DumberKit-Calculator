@@ -14,7 +14,7 @@ in the converter or settings tab returns to the calculator.
 | Screen | Keys |
 | --- | --- |
 | **Calculator** | 0–9 type numbers · `*` adds +, pressed again −, ×, ÷ (at the start: a negative number) · `#` decimal point · OK or the green call key shows the result · Back deletes (with nothing typed: closes) · hold Back clears |
-| **More functions** | hold `*`: %, power, square root, parentheses, ± |
+| **Symbol palette** | hold `*`: square tiles laid out like the keypad (+ − × ÷ ^ √ ( ) % and ±), the digit at a tile's place or the arrows and OK put it in · `*` or Back closes it |
 | **History** | ↑ / ↓ go through the calculations above the input, the picked one can be changed and computed again |
 | **Unit converter** | ↑ / ↓ and OK pick length, area, volume, mass, temperature, time, speed, pressure or energy |
 | **Converting** | digits and `#` type the upper value · ↑ / ↓ pick a unit row · ← / → change its unit · OK lists all units · `*` swaps the units · hold `*` makes a temperature negative |

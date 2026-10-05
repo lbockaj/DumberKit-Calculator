@@ -7,11 +7,6 @@
     <string name="dpad_more_functions">More functions (hold *)</string>
     <string name="dpad_clear_history">Clear history</string>
     <string name="dpad_clear_history_question">Delete all calculations from the history?</string>
-    <string name="dpad_function_percent">%  Percent</string>
-    <string name="dpad_function_power">^  Power</string>
-    <string name="dpad_function_root">√  Square root</string>
-    <string name="dpad_function_open_parenthesis">(  Open parenthesis</string>
-    <string name="dpad_function_close_parenthesis">)  Close parenthesis</string>
     <string name="dpad_function_sign">±  Negative number</string>
     <!-- unit converter -->
     <string name="dpad_hint_converter">←/→ unit · OK all units · * swap · # decimal</string>
@@ -41,7 +36,7 @@
     <string name="dpad_key_star_hold">Hold *</string>
     <string name="dpad_key_calc_digits_action">Type numbers</string>
     <string name="dpad_key_calc_star_action">Add +, press again for −, ×, ÷ (at the start: a negative number)</string>
-    <string name="dpad_key_calc_star_hold_action">%, power, square root, parentheses, ±</string>
+    <string name="dpad_key_calc_star_hold_action">Palette of symbols laid out like the keypad: the digit at a symbol\'s place (or OK) puts it in</string>
     <string name="dpad_key_calc_pound_action">Decimal point</string>
     <string name="dpad_key_calc_ok_action">Result</string>
     <string name="dpad_key_calc_back_action">Delete the last character (a result at once); with nothing typed: close</string>
