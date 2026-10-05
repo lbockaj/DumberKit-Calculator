@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>CyclomaticComplexMethod:CalculatorImpl.kt$CalculatorImpl$fun handleOperation(operation: String)</ID>
+    <ID>CyclomaticComplexMethod:CalculatorImpl.kt$CalculatorImpl$private fun calculateResult()</ID>
+    <ID>CyclomaticComplexMethod:MyWidgetProvider.kt$MyWidgetProvider$private fun myAction(action: String, context: Context)</ID>
+    <ID>EmptyFunctionBlock:WidgetConfigureActivity.kt$WidgetConfigureActivity.&lt;no name provided&gt;${}</ID>
+    <ID>ForEachOnRange:Context.kt$(0 until cnt).map { viewGroup.getChildAt(it) }</ID>
+    <ID>MagicNumber:CalculatorImpl.kt$CalculatorImpl$3</ID>
+    <ID>MagicNumber:CalculatorImpl.kt$CalculatorImpl$4</ID>
+    <ID>MagicNumber:CalculatorImpl.kt$CalculatorImpl$5</ID>
+    <ID>MagicNumber:CalculatorImpl.kt$CalculatorImpl$6</ID>
+    <ID>MagicNumber:CalculatorImpl.kt$CalculatorImpl$7</ID>
+    <ID>MagicNumber:CalculatorImpl.kt$CalculatorImpl$8</ID>
+    <ID>MagicNumber:CalculatorImpl.kt$CalculatorImpl$9</ID>
+    <ID>MagicNumber:ConverterView.kt$ConverterView$3</ID>
+    <ID>MagicNumber:ConverterView.kt$ConverterView$4</ID>
+    <ID>MagicNumber:ConverterView.kt$ConverterView$5</ID>
+    <ID>MagicNumber:ConverterView.kt$ConverterView$6</ID>
+    <ID>MagicNumber:ConverterView.kt$ConverterView$7</ID>
+    <ID>MagicNumber:ConverterView.kt$ConverterView$8</ID>
+    <ID>MagicNumber:ConverterView.kt$ConverterView$9</ID>
+    <ID>MagicNumber:WidgetConfigureActivity.kt$WidgetConfigureActivity$100</ID>
+    <ID>MaxLineLength:Context.kt$// we are reusing the same layout in the app and widget, but cannot use MyTextView etc in a widget, so color regular view types like this</ID>
+    <ID>MaxLineLength:MyWidgetProvider.kt$MyWidgetProvider$DECIMAL</ID>
+    <ID>NestedBlockDepth:CalculatorImpl.kt$CalculatorImpl$fun handleOperation(operation: String)</ID>
+    <ID>NestedBlockDepth:ConverterView.kt$ConverterView$fun deleteCharacter()</ID>
+    <ID>NestedBlockDepth:ConverterView.kt$ConverterView$private fun updateBottomValue()</ID>
+    <ID>TooGenericExceptionCaught:Context.kt$e: Exception</ID>
+    <ID>TooManyFunctions:CalculatorImpl.kt$CalculatorImpl</ID>
+    <ID>TooManyFunctions:ConverterView.kt$ConverterView : LinearLayout</ID>
+    <ID>TooManyFunctions:MainActivity.kt$MainActivity : SimpleActivityCalculator</ID>
+    <ID>TooManyFunctions:MyWidgetProvider.kt$MyWidgetProvider : AppWidgetProviderCalculator</ID>
+    <ID>UnusedPrivateMember:SettingsScreen.kt$@MyDevices @Composable private fun SettingsScreenPreview( @PreviewParameter(BooleanPreviewParameterProvider::class) showCheckmarksOnSwitches: Boolean )</ID>
+  </CurrentIssues>
+</SmellBaseline>

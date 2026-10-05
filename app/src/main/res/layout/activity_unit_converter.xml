@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Converter for keypad phones: the two unit rows (↑/↓ pick one, ←/→ or OK change its unit), digits always go to the
+  upper value, the lower one is computed. The number pad of the touch version is gone, a line with key hints instead.
+-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/unit_converter_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.fossify.math.activities.UnitConverterActivity">
+
+    <org.fossify.commons.views.MyAppBarLayout
+        android:id="@+id/unit_converter_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/unit_converter_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_primary"
+            app:titleTextAppearance="@style/AppTheme.ActionBar.TitleTextStyle" />
+
+    </org.fossify.commons.views.MyAppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/converter_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include
+            android:id="@+id/view_converter"
+            layout="@layout/view_converter"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/converter_key_hints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:gravity="center"
+            android:maxLines="2"
+            android:paddingStart="@dimen/small_margin"
+            android:paddingTop="@dimen/tiny_margin"
+            android:paddingEnd="@dimen/small_margin"
+            android:paddingBottom="@dimen/small_margin"
+            android:text="@string/dpad_hint_converter"
+            android:textSize="@dimen/dpad_hint_text_size" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

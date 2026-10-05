@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Overrides Material's dialog button style (same name), which every dialog button in the app inherits from,
+      both Commons' dialogs and the Material You ones. The original items are kept, the focused state gets a frame
+      and a tinted background so the selected button is easy to see when using keys.
+    -->
+    <style name="Widget.Material3.Button.TextButton.Dialog" parent="Widget.Material3.Button.TextButton">
+        <item name="android:minWidth">@dimen/m3_btn_dialog_btn_min_width</item>
+        <item name="android:layout_marginLeft">@dimen/m3_btn_dialog_btn_spacing</item>
+        <item name="android:layout_marginStart">@dimen/m3_btn_dialog_btn_spacing</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="strokeColor">@color/dpad_dialog_button_stroke</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="backgroundTint">@color/dpad_dialog_button_background</item>
+        <!-- the first arrow key in a dialog lands on a button even when nothing is focused yet -->
+        <item name="android:focusedByDefault">true</item>
+    </style>
+
+</resources>

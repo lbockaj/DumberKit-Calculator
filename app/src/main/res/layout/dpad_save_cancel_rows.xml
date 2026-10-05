@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- "Cancel" / "Save" rows under a divider, for screens whose Save is only a toolbar icon (color customization) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dpad_save_cancel_rows"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/normal_margin">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:background="#33808080" />
+
+    <LinearLayout
+        android:id="@+id/dpad_cancel_row_holder"
+        style="@style/DpadDetailRow">
+
+        <ImageView
+            android:id="@+id/dpad_cancel_row_icon"
+            style="@style/DpadDetailRowIcon"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_cross_vector" />
+
+        <TextView
+            android:id="@+id/dpad_cancel_row_label"
+            style="@style/DpadDetailRowText"
+            android:text="@string/cancel" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dpad_save_row_holder"
+        style="@style/DpadDetailRow">
+
+        <ImageView
+            android:id="@+id/dpad_save_row_icon"
+            style="@style/DpadDetailRowIcon"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_check_vector" />
+
+        <TextView
+            android:id="@+id/dpad_save_row_label"
+            style="@style/DpadDetailRowText"
+            android:text="@string/save" />
+    </LinearLayout>
+</LinearLayout>

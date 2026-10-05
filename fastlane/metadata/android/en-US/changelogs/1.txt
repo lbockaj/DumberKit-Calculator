@@ -1,0 +1,1 @@
+First version for keypad phones, based on Fossify Calculator 1.4.0: calculations typed on the keypad, correct order of operations, history, unit converter and settings in tabs switched by left / right.

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_launcher_name">계산기</string>
+    <string name="scientific_calculator">공학용 계산기</string>
+    <string name="formula_divide_by_zero_error">에러: 공으로 나눌 할수 없어요</string>
+    <string name="vibrate_on_button_press">버튼 탭시 진동</string>
+    <string name="faq_1_title">C (Clear) 버튼을 어떻게 사용합니까?</string>
+    <string name="faq_1_text">탭하면 한 번에 한 문자가 제거됩니다. 길게 탭하면 모든 필드가 재설정됩니다.</string>
+</resources>

@@ -1,0 +1,13 @@
+A calculator and unit converter for keypad phones like the Qin F21, Dumber Mini or Doov R77 Pro. The calculation is typed straight on the keypad, no on-screen buttons and no touchscreen needed.
+
+<ul>
+<li>Digits type numbers, * adds an operator and turns it into the next one (+ − × ÷), # is the decimal point</li>
+<li>OK or the green call key shows the result, with the correct order of operations</li>
+<li>Hold * for percent, power, square root, parentheses and negative numbers</li>
+<li>History above the input, up / down go through it</li>
+<li>Unit converter: length, area, volume, mass, temperature, time, speed, pressure, energy</li>
+<li>Calculator, converter and settings in tabs switched by left / right</li>
+<li>No ads, no tracking, no internet access</li>
+</ul>
+
+Based on Fossify Calculator (GPL-3.0), keypad input inspired by Calc-U-Later.

@@ -1,0 +1,94 @@
+[versions]
+#jetbrains
+kotlin = "2.3.10"
+#KSP
+ksp = "2.3.12"
+#Detekt
+detekt = "1.23.8"
+detektCompose = "0.4.28"
+#Androidx
+androidx-customView = "1.2.0"
+androidx-customViewPooling = "1.1.0"
+androidx-lifecycle = "2.10.0"
+#Compose
+composeActivity = "1.13.0"
+compose = "1.7.8"
+composeMaterial3 = "1.4.0"
+#AutoFitTextView
+autofittextview = "0.2.1"
+#EvalEx
+evalex = "3.7.0"
+#Room
+room = "2.8.5"
+#Fossify
+commons = "6.1.6"
+#Gradle
+gradlePlugins-agp = "9.4.0"
+#build
+app-build-compileSDKVersion = "36"
+app-build-targetSDK = "36"
+app-build-minimumSDK = "26"
+app-build-javaVersion = "VERSION_17"
+app-build-kotlinJVMTarget = "17"
+
+[libraries]
+#Android X
+androidx-customView = { module = "androidx.customview:customview", version.ref = "androidx-customView" }
+androidx-customViewPooling = { module = "androidx.customview:customview-poolingcontainer", version.ref = "androidx-customViewPooling" }
+#Android X lifecycle
+androidx-lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-viewModel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-viewModel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+#Room
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+#Compose
+compose-detekt = { module = "io.nlopez.compose.rules:detekt", version.ref = "detektCompose" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "composeMaterial3" }
+compose-material-icons = { module = "androidx.compose.material:material-icons-extended", version.ref = "compose" }
+compose-animation = { module = "androidx.compose.animation:animation", version.ref = "compose" }
+compose-activity = { module = "androidx.activity:activity-compose", version.ref = "composeActivity" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "compose" }
+compose-uiTooling-debug = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-uiTooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+#UI
+auto-fit-text-view = { module = "me.grantland:autofittextview", version.ref = "autofittextview" }
+#Fossify
+fossify-commons = { module = "org.fossify:commons", version.ref = "commons" }
+#EvalEx
+evalex = { module = "com.ezylang:EvalEx", version.ref = "evalex" }
+[bundles]
+compose = [
+    "compose-activity",
+    "compose-animation",
+    "compose-foundation",
+    "compose-material-icons",
+    "compose-material3",
+    "compose-runtime",
+    "compose-ui",
+    "compose-uiTooling-preview",
+]
+compose-preview = [
+    "androidx-customView",
+    "androidx-customViewPooling",
+    "compose-uiTooling-debug",
+]
+room = [
+    "androidx-room-ktx",
+    "androidx-room-runtime",
+]
+lifecycle = [
+    "androidx-lifecycle-compose",
+    "androidx-lifecycle-runtime",
+    "androidx-lifecycle-viewModel",
+    "androidx-lifecycle-viewModel-compose",
+]
+[plugins]
+android = { id = "com.android.application", version.ref = "gradlePlugins-agp" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }

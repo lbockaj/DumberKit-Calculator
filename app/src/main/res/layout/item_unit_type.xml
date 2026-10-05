@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/unit_type_holder"
+    style="@style/DpadHomeRow">
+
+    <ImageView
+        android:id="@+id/unit_type_icon"
+        style="@style/DpadHomeRowIcon"
+        android:importantForAccessibility="no"
+        tools:src="@drawable/ic_height_vector" />
+
+    <org.fossify.commons.views.MyTextView
+        android:id="@+id/unit_type_label"
+        style="@style/DpadHomeRowLabel"
+        tools:text="Length" />
+
+</LinearLayout>

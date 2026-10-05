@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Overrides Commons' dialog_line_color_picker (same name and view ids): each color line is wrapped in a
+  DpadColorLineFrame so it can be focused and changed with left/right on keypad phones.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/line_color_picker_holder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_margin">
+
+    <ImageView
+        android:id="@+id/line_color_picker_icon"
+        android:layout_width="@dimen/line_color_picker_app_icon_size"
+        android:layout_height="@dimen/line_color_picker_app_icon_size"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/medium_margin"
+        android:visibility="gone" />
+
+    <org.fossify.math.views.DpadColorLineFrame
+        android:id="@+id/dpad_primary_line_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_color_picker_icon"
+        android:padding="4dp">
+
+        <org.fossify.commons.views.LineColorPicker
+            android:id="@+id/primary_line_color_picker"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_color_picker_height" />
+    </org.fossify.math.views.DpadColorLineFrame>
+
+    <org.fossify.math.views.DpadColorLineFrame
+        android:id="@+id/dpad_secondary_line_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dpad_primary_line_frame"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:padding="4dp">
+
+        <org.fossify.commons.views.LineColorPicker
+            android:id="@+id/secondary_line_color_picker"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_color_picker_height" />
+    </org.fossify.math.views.DpadColorLineFrame>
+
+    <org.fossify.commons.views.MyTextView
+        android:id="@+id/hex_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dpad_secondary_line_frame"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/big_margin"
+        android:textSize="@dimen/bigger_text_size"
+        tools:text="#FF0000" />
+
+</RelativeLayout>

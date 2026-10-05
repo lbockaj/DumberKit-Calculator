@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- calculator screen -->
+    <string name="dpad_calculator_empty">Type a calculation with the keypad. Your calculations will be listed here.</string>
+    <string name="dpad_error_invalid">Incomplete calculation</string>
+    <string name="dpad_error_too_big">The number is too big</string>
+    <string name="dpad_more_functions">More functions (hold *)</string>
+    <string name="dpad_clear_history">Clear history</string>
+    <string name="dpad_clear_history_question">Delete all calculations from the history?</string>
+    <string name="dpad_function_percent">%  Percent</string>
+    <string name="dpad_function_power">^  Power</string>
+    <string name="dpad_function_root">√  Square root</string>
+    <string name="dpad_function_open_parenthesis">(  Open parenthesis</string>
+    <string name="dpad_function_close_parenthesis">)  Close parenthesis</string>
+    <string name="dpad_function_sign">±  Negative number</string>
+    <!-- unit converter -->
+    <string name="dpad_hint_converter">←/→ unit · OK all units · * swap · # decimal</string>
+    <string name="dpad_clear_value">Clear the value</string>
+    <!-- settings -->
+    <string name="dpad_touch_input">Allow touch input</string>
+    <string name="dpad_show_key_hints">Show key hints</string>
+    <string name="dpad_pick_color">Color</string>
+    <string name="dpad_pick_shade">Shade</string>
+    <!-- about -->
+    <string name="dpad_about_app_name" translatable="false">DumberKit Calculator</string>
+    <string name="dpad_about_version">Version %s</string>
+    <string name="dpad_about_description">A calculator and unit converter for keypad phones like the Qin F21, Dumber Mini or Doov R77 Pro. Everything works with the D-pad and the keypad, no touchscreen needed.</string>
+    <string name="dpad_about_shortcuts">Keypad shortcuts</string>
+    <string name="dpad_about_license_title">License</string>
+    <string name="dpad_about_license">Free and open source software under the GNU General Public License v3.0. No ads, no tracking.</string>
+    <string name="dpad_key_ok" translatable="false">OK</string>
+    <string name="dpad_key_up_down" translatable="false">↑ / ↓</string>
+    <string name="dpad_key_left_right" translatable="false">← / →</string>
+    <string name="dpad_key_left" translatable="false">←</string>
+    <string name="dpad_key_digits" translatable="false">0–9</string>
+    <string name="dpad_key_star" translatable="false">*</string>
+    <string name="dpad_key_pound" translatable="false">#</string>
+    <string name="dpad_key_menu" translatable="false">Menu</string>
+    <string name="dpad_key_back">Back</string>
+    <string name="dpad_key_back_hold">Hold Back</string>
+    <string name="dpad_key_star_hold">Hold *</string>
+    <string name="dpad_key_calc_digits_action">Type numbers</string>
+    <string name="dpad_key_calc_star_action">Add +, press again for −, ×, ÷ (at the start: a negative number)</string>
+    <string name="dpad_key_calc_star_hold_action">%, power, square root, parentheses, ±</string>
+    <string name="dpad_key_calc_pound_action">Decimal point</string>
+    <string name="dpad_key_calc_ok_action">Result</string>
+    <string name="dpad_key_calc_back_action">Delete the last character (a result at once); with nothing typed: close</string>
+    <string name="dpad_key_calc_back_hold_action">Clear everything</string>
+    <string name="dpad_key_calc_left_action">Switch the tabs: calculator, unit converter, settings</string>
+    <string name="dpad_key_calc_up_down_action">Go through the history, the calculation can be changed and computed again</string>
+    <string name="dpad_key_calc_menu_action">More functions, clear history</string>
+    <string name="dpad_key_converter_digits_action">Type the upper value, the lower one is computed</string>
+    <string name="dpad_key_converter_up_down_action">Pick the upper or lower unit</string>
+    <string name="dpad_key_converter_left_right_action">Previous / next unit</string>
+    <string name="dpad_key_converter_ok_action">List of all units</string>
+    <string name="dpad_key_converter_star_action">Swap the units</string>
+    <string name="dpad_key_converter_star_hold_action">Negative temperature</string>
+    <string name="dpad_key_converter_back_action">Delete the last digit; with nothing typed: close</string>
+    <string name="dpad_key_converter_back_hold_action">Clear the value</string>
+    <string name="dpad_about_tabs">All tabs</string>
+    <string name="dpad_key_tabs_back_action">In the converter and settings tabs: back to the calculator</string>
+    <string name="dpad_copy_result">Copy the result</string>
+    <string name="dpad_use_in_calculator">Use in the calculator</string>
+</resources>

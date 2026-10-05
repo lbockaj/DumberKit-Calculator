@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_launcher_name">Kalkulator</string>
+    <string name="scientific_calculator">Kalkulator Saintifik</string>
+    <string name="formula_divide_by_zero_error">Amaran: pembahagian dengan sifar</string>
+    <string name="vibrate_on_button_press">Getar semasa butang ditekan</string>
+    <string name="faq_1_title">Bagaimana Butang C (Menghapus) Digunakan？</string>
+    <string name="faq_1_text">Tekan sekali untuk menghapuskan satu karakter. Tekan lama untuk mengosongkan tempat yang diisikan. </string>
+</resources>

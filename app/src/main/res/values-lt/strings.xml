@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_launcher_name">Skaičiuotuvas</string>
+    <string name="scientific_calculator">Mokslinis skaičiuotuvas</string>
+    <string name="formula_divide_by_zero_error">Klaida: dalyba iš nulio</string>
+    <string name="history">Istorija</string>
+    <string name="history_empty">Istorija yra tuščia</string>
+    <string name="clear_history">Išvalyti</string>
+    <string name="history_cleared">Istorija išvalyta</string>
+    <string name="vibrate_on_button_press">Vibruoti, kai paspaudžiami mygtukai</string>
+    <string name="faq_1_title">Kaip veikia C (Išvalymo) mygtukas\?</string>
+    <string name="faq_1_text">Kiekvieną kartą ant jo bakstelėjus, bus šalinama po vieną simbolį. Ilgai jį palaikius, bus iš karto atstatyti visi laukai.</string>
+</resources>

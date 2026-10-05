@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="dpad_touch_blocker" type="id" />
+    <item name="dpad_focus_prepared" type="id" />
+    <!-- Compact sizes for small keypad phone screens (~480x640) -->
+    <dimen name="dpad_toolbar_height">34dp</dimen>
+    <dimen name="dpad_title_text_size">15sp</dimen>
+    <!-- calculator screen -->
+    <dimen name="dpad_expression_text_size">40sp</dimen>
+    <dimen name="dpad_expression_min_height">56dp</dimen>
+    <dimen name="dpad_preview_text_size">18sp</dimen>
+    <dimen name="dpad_preview_min_height">30dp</dimen>
+    <dimen name="dpad_hint_text_size">12sp</dimen>
+    <dimen name="dpad_history_formula_size">14sp</dimen>
+    <dimen name="dpad_history_result_size">17sp</dimen>
+    <!-- bottom bar of the tabs, icons only -->
+    <dimen name="dpad_tabs_height">36dp</dimen>
+    <dimen name="dpad_tab_icon_size">22dp</dimen>
+    <dimen name="dpad_home_row_height">52dp</dimen>
+    <dimen name="dpad_home_icon_size">26dp</dimen>
+    <dimen name="dpad_home_text_size">18sp</dimen>
+    <dimen name="dpad_home_status_text_size">15sp</dimen>
+    <color name="dpad_save_green">#43A047</color>
+    <color name="dpad_cancel_red">#E53935</color>
+    <dimen name="dpad_settings_row_height">52dp</dimen>
+    <dimen name="dpad_settings_row_padding">10dp</dimen>
+    <dimen name="dpad_settings_section_padding">14dp</dimen>
+    <dimen name="dpad_about_key_width">104dp</dimen>
+    <dimen name="dpad_colorpicker_size">150dp</dimen>
+    <dimen name="dpad_colorpicker_size_with_padding">160dp</dimen>
+    <dimen name="dpad_detail_row_height">44dp</dimen>
+    <dimen name="dpad_detail_icon_size">24dp</dimen>
+    <dimen name="dpad_detail_text_size">16sp</dimen>
+    <!-- no donation dialogs and store links from Commons -->
+    <bool name="hide_google_relations">true</bool>
+
+    <style name="DpadHomeRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dpad_home_row_height</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">@dimen/activity_margin</item>
+        <item name="android:paddingEnd">@dimen/activity_margin</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="DpadHomeRowIcon">
+        <item name="android:layout_width">@dimen/dpad_home_icon_size</item>
+        <item name="android:layout_height">@dimen/dpad_home_icon_size</item>
+        <item name="android:layout_marginEnd">@dimen/activity_margin</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="DpadHomeRowLabel">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/dpad_home_text_size</item>
+    </style>
+
+    <style name="DpadHomeRowStatus">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/medium_margin</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/dpad_home_status_text_size</item>
+        <item name="android:alpha">0.7</item>
+    </style>
+
+    <!-- popup menus: AndroidX PopupMenu reads popupMenuStyle (not android:popupMenuStyle like Commons' styles) -->
+    <style name="DpadPopupOverlay.Light" parent="ThemeOverlay.Material3.Light">
+        <item name="popupMenuStyle">@style/DpadPopupMenu.Light</item>
+        <item name="android:popupMenuStyle">@style/DpadPopupMenu.Light</item>
+        <item name="android:textColorPrimary">@color/theme_light_text_color</item>
+        <item name="android:textColor">@color/theme_light_text_color</item>
+    </style>
+
+    <style name="DpadPopupMenu.Light" parent="Widget.Material3.PopupMenu">
+        <item name="android:popupBackground">@drawable/top_popup_menu_bg_light</item>
+        <item name="android:popupElevation">@dimen/popup_menu_elevation</item>
+    </style>
+
+    <style name="DpadPopupOverlay.Dark" parent="ThemeOverlay.Material3.Dark">
+        <item name="popupMenuStyle">@style/DpadPopupMenu.Dark</item>
+        <item name="android:popupMenuStyle">@style/DpadPopupMenu.Dark</item>
+        <item name="android:textColorPrimary">@color/theme_dark_text_color</item>
+        <item name="android:textColor">@color/theme_dark_text_color</item>
+    </style>
+
+    <style name="DpadPopupMenu.Dark" parent="Widget.Material3.PopupMenu">
+        <item name="android:popupBackground">@drawable/top_popup_menu_bg_dark</item>
+        <item name="android:popupElevation">@dimen/popup_menu_elevation</item>
+    </style>
+
+    <style name="DpadTopBarTitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">@dimen/dpad_title_text_size</item>
+    </style>
+    <style name="DpadDetailRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/dpad_detail_row_height</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">@dimen/normal_margin</item>
+        <item name="android:paddingEnd">@dimen/normal_margin</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="DpadDetailRowIcon">
+        <item name="android:layout_width">@dimen/dpad_detail_icon_size</item>
+        <item name="android:layout_height">@dimen/dpad_detail_icon_size</item>
+        <item name="android:layout_marginEnd">@dimen/normal_margin</item>
+        <item name="android:focusable">false</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="DpadDetailRowText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/dpad_detail_text_size</item>
+    </style>
+</resources>
