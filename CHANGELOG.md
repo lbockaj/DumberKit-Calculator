@@ -16,7 +16,7 @@ First release, based on Fossify Calculator 1.4.0.
   *Use in the calculator* from the Menu
 - Copy the result from the Menu
 - Settings and an About screen with all the keys, made for keypad navigation
-- Blue app icon by default; picking a theme keeps the icon color
+- App icon with a calculator pictogram, blue by default; any other color can be picked and a theme keeps it
 
 ### Changed
 - Smaller app (APK 5.4 → 3.2 MB): Commons' own About, license, FAQ, contributors, donation and blocked numbers
