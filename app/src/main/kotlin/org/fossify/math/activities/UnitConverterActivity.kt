@@ -22,9 +22,9 @@ import org.fossify.math.helpers.dpadPopupMenu
 import org.fossify.math.views.ConverterView
 
 /**
- * One kind of units. Digits and '#' (decimal point) type the upper value, the lower one is computed. ↑/↓ pick a unit
- * row, ←/→ change its unit, OK lists all units, '*' swaps the units, hold '*' makes a temperature negative, Back
- * deletes (and closes when nothing is typed), hold Back clears.
+ * One kind of units. Digits and '#' (decimal point) type the value of the focused row, the other one is computed. ↑/↓
+ * pick a unit row, ←/→ change its unit, OK lists all units, '*' swaps the units, hold '*' makes a temperature
+ * negative, Back deletes (and closes when nothing is typed), hold Back clears.
  */
 class UnitConverterActivity : SimpleActivity(), ConverterView.OnUnitChangedListener {
     companion object {
@@ -68,11 +68,17 @@ class UnitConverterActivity : SimpleActivity(), ConverterView.OnUnitChangedListe
             }
         }
 
-        listOf(converterView.topUnitRow, converterView.bottomUnitRow).forEach {
-            it.isFocusable = true
-            it.applyDpadFocusHighlight()
+        listOf(converterView.topUnitRow, converterView.bottomUnitRow).forEach { row ->
+            row.isFocusable = true
+            row.applyDpadFocusHighlight()
             // the unit list opens from the keys (on key up), copying by a long press is for touch only
-            it.isLongClickable = false
+            row.isLongClickable = false
+            // both ways: the focused row is the one typed into
+            row.setOnFocusChangeListener { _, hasFocus ->
+                if (hasFocus) {
+                    converterView.setInputRow(row == converterView.topUnitRow)
+                }
+            }
         }
         // the swap arrow between the rows is only a picture here ('*' swaps)
         binding.viewConverter.swapButton?.apply {
@@ -115,7 +121,7 @@ class UnitConverterActivity : SimpleActivity(), ConverterView.OnUnitChangedListe
 
     /** Negative values only make sense for °C and °F (Kelvin and Rankine start at absolute zero). */
     private fun canBeNegative(): Boolean {
-        return converter.key == TemperatureConverter.key && when (converterView.currentTopUnit?.key) {
+        return converter.key == TemperatureConverter.key && when (converterView.currentFocusedUnit?.key) {
             TemperatureConverter.Unit.Kelvin.key, TemperatureConverter.Unit.Rankine.key -> false
             else -> true
         }
@@ -190,7 +196,7 @@ class UnitConverterActivity : SimpleActivity(), ConverterView.OnUnitChangedListe
 
     /** The converted (lower) value goes to the calculator tab, like a result to compute with. */
     private fun useInCalculator() {
-        val value = converterView.bottomValue() ?: return
+        val value = converterView.computedValue() ?: return
         Intent(this, MainActivity::class.java).apply {
             putExtra(MainActivity.EXTRA_VALUE, CalculatorInput.toExpressionText(value))
             addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)

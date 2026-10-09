@@ -9,6 +9,7 @@ const val CONVERTER_UNITS_PREFIX = "converter_last_units"
 const val TOP_UNIT = "top_unit"
 const val BOTTOM_UNIT = "bottom_unit"
 const val CONVERTER_VALUE = "converter_value"
+const val CONVERTER_INPUT_TOP = "converter_input_top"
 const val CONVERTER_STATE = "converter_state"
 
 // big decimal configuration
@@ -19,4 +20,3 @@ const val DPAD_TOUCH_ENABLED = "dpad_touch_enabled"
 const val DPAD_SHOW_KEY_HINTS = "dpad_show_key_hints"
 const val DPAD_EXPRESSION = "dpad_expression"
 const val DPAD_EXPRESSION_IS_RESULT = "dpad_expression_is_result"
-const val DPAD_LAST_CONVERTER = "dpad_last_converter"

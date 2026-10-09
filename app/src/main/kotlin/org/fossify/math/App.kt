@@ -28,12 +28,14 @@ import org.fossify.math.helpers.dpadCompactTopBar
 import org.fossify.math.helpers.ignoreTouches
 
 private const val BLUE_ICON_SET = "dumberkit_blue_icon"
+private const val ICON_ALIASES_RENAMED = "dumberkit_icon_aliases_renamed"
 
 class App : FossifyApp() {
 
     override fun onCreate() {
         super.onCreate()
         useBlueIconByDefault()
+        migrateRenamedIconAliases()
         useSystemThemeByDefault()
         // Commons calls any build without one of its unused images (removed by the release shrinker) a "fake version"
         // and sends people to its website; this app is built from its own source on purpose
@@ -208,6 +210,24 @@ class App : FossifyApp() {
             baseConfig.lastIconColor = blue
         } else {
             // another entry is enabled: let Commons switch the launcher entries over to the blue one
+            baseConfig.lastIconColor = 0
+            checkAppIconColor()
+        }
+    }
+
+    /**
+     * Commons looks the launcher entries up by the app id (com.dumberkit.calculator.activities.SplashActivity.Red…),
+     * they were named after the code package before, so picking another icon color failed. After the rename an
+     * update starts with the default entry enabled: switch once to the color the user had picked.
+     */
+    private fun migrateRenamedIconAliases() {
+        val prefs = getSharedPreferences(PREFS_KEY, MODE_PRIVATE)
+        if (prefs.getBoolean(ICON_ALIASES_RENAMED, false)) {
+            return
+        }
+
+        prefs.edit().putBoolean(ICON_ALIASES_RENAMED, true).apply()
+        if (baseConfig.appId.isNotEmpty()) {
             baseConfig.lastIconColor = 0
             checkAppIconColor()
         }

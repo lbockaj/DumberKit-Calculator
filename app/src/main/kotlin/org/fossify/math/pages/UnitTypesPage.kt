@@ -9,7 +9,6 @@ import org.fossify.math.activities.SimpleActivity
 import org.fossify.math.activities.UnitConverterActivity
 import org.fossify.math.databinding.ItemUnitTypeBinding
 import org.fossify.math.databinding.PageUnitTypesBinding
-import org.fossify.math.extensions.config
 import org.fossify.math.helpers.applyDpadFocusHighlight
 import org.fossify.math.helpers.converters.Converter
 
@@ -34,14 +33,14 @@ class UnitTypesPage(private val activity: SimpleActivity, private val binding: P
         rows.forEach { it.unitTypeIcon.applyColorFilter(activity.getProperPrimaryColor()) }
     }
 
-    /** The kind of units used last time is picked whenever the tab is shown. */
+    /** The first kind of units (length) is focused whenever the tab is shown, the list scrolled to the top. */
     fun focus() {
-        val row = rows.getOrNull(activity.config.dpadLastConverter) ?: rows.firstOrNull() ?: return
+        val row = rows.firstOrNull() ?: return
+        binding.unitTypesScrollview.scrollTo(0, 0)
         row.root.requestFocusFromTouch()
     }
 
     private fun openConverter(index: Int) {
-        activity.config.dpadLastConverter = index
         Intent(activity, UnitConverterActivity::class.java).apply {
             putExtra(UnitConverterActivity.EXTRA_CONVERTER_ID, index)
             activity.startActivity(this)

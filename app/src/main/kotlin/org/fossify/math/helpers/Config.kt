@@ -14,10 +14,6 @@ class Config(context: Context) : BaseConfig(context) {
         get() = prefs.getBoolean(DPAD_TOUCH_ENABLED, false)
         set(dpadTouchEnabled) = prefs.edit().putBoolean(DPAD_TOUCH_ENABLED, dpadTouchEnabled).apply()
 
-    var dpadLastConverter: Int
-        get() = prefs.getInt(DPAD_LAST_CONVERTER, 0)
-        set(dpadLastConverter) = prefs.edit().putInt(DPAD_LAST_CONVERTER, dpadLastConverter).apply()
-
     var dpadShowKeyHints: Boolean
         get() = prefs.getBoolean(DPAD_SHOW_KEY_HINTS, true)
         set(dpadShowKeyHints) = prefs.edit().putBoolean(DPAD_SHOW_KEY_HINTS, dpadShowKeyHints).apply()

@@ -129,4 +129,7 @@
         <item name="android:ellipsize">end</item>
         <item name="android:textSize">@dimen/dpad_detail_text_size</item>
     </style>
+    <!-- unit converter: compact rows so the focus frame only wraps one row -->
+    <dimen name="dpad_converter_value_size">30sp</dimen>
+    <dimen name="dpad_converter_swap_size">32dp</dimen>
 </resources>

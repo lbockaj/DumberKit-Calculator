@@ -1,0 +1,1 @@
+First release: calculations typed straight on the keypad with the usual order of operations, a symbol palette on a held *, a history you can go through with up / down, and the unit converter and settings in tabs switched with left / right.

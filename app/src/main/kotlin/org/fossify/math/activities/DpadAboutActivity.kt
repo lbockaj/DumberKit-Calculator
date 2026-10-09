@@ -8,6 +8,8 @@ import org.fossify.math.BuildConfig
 import org.fossify.math.R
 import org.fossify.math.databinding.ActivityDpadAboutBinding
 import org.fossify.math.helpers.dpadCompactTopBar
+import org.fossify.commons.extensions.baseConfig
+import org.fossify.commons.extensions.getAppIconColors
 import org.fossify.commons.extensions.getProperPrimaryColor
 import org.fossify.commons.extensions.updateTextColors
 import org.fossify.commons.extensions.viewBinding
@@ -54,7 +56,10 @@ class DpadAboutActivity : SimpleActivity() {
         setupEdgeToEdge(padBottomSystem = listOf(binding.aboutNestedScrollview))
 
         binding.aboutVersion.text = getString(R.string.dpad_about_version, BuildConfig.VERSION_NAME)
-        binding.aboutIcon.setImageDrawable(packageManager.getApplicationIcon(applicationInfo))
+        // the icon in the color picked in the settings (the app's own default icon is the plain green one)
+        binding.aboutIcon.setImageResource(
+            getAppIconIDs().getOrNull(getAppIconColors().indexOf(baseConfig.appIconColor)) ?: R.mipmap.ic_launcher_blue
+        )
         addShortcuts()
     }
 

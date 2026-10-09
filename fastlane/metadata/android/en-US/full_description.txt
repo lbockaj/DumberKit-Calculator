@@ -1,13 +1,21 @@
-A calculator and unit converter for keypad phones like the Qin F21, Dumber Mini or Doov R77 Pro. The calculation is typed straight on the keypad, no on-screen buttons and no touchscreen needed.
+A calculator and unit converter for keypad phones like the Qin F21, Dumber Mini or Doov R77 Pro. There are no on-screen buttons: you type the calculation straight on the keypad and press OK for the result. Touch is switched off inside the app, so nothing gets pressed by accident in your pocket.
 
-<ul>
-<li>Digits type numbers, * adds an operator and turns it into the next one (+ − × ÷), # is the decimal point</li>
-<li>OK or the green call key shows the result, with the correct order of operations</li>
-<li>Hold * for percent, power, square root, parentheses and negative numbers</li>
-<li>History above the input, up / down go through it</li>
-<li>Unit converter: length, area, volume, mass, temperature, time, speed, pressure, energy</li>
-<li>Calculator, converter and settings in tabs switched by left / right</li>
-<li>No ads, no tracking, no internet access</li>
-</ul>
+<b>Keys</b>
+• 0–9 – type numbers
+• * – add an operator, press it again for the next one (+ − × ÷)
+• Hold * – a palette of symbols laid out like the keypad: ^, √, parentheses, %, ±
+• # – decimal point
+• OK or Call – show the result
+• Back – delete the last character; hold it to clear everything
+• ↑ / ↓ – go through the history
+• ← / → – switch between Calculator, Unit converter and Settings
+
+<b>Features</b>
+• The usual order of operations and exact decimals (0.1 + 0.2 = 0.3)
+• History like a paper tape, cleared when you close the app
+• Unit converter for length, area, volume, mass, temperature, time, speed, pressure and energy, in both directions
+• Copy the result, or take a converted value over to the calculator
+• System, light, dark, dark red and custom themes, a keypad-friendly color picker, blue or any other icon color
+• No ads, no tracking, no internet access
 
 Based on Fossify Calculator (GPL-3.0), keypad input inspired by Calc-U-Later.

@@ -24,6 +24,7 @@ import org.fossify.math.R
 import org.fossify.math.databinding.ViewConverterBinding
 import org.fossify.math.extensions.config
 import org.fossify.math.helpers.BOTTOM_UNIT
+import org.fossify.math.helpers.CONVERTER_INPUT_TOP
 import org.fossify.math.helpers.CONVERTER_VALUE
 import org.fossify.math.helpers.NumberFormatHelper
 import org.fossify.math.helpers.TOP_UNIT
@@ -48,6 +49,18 @@ class ConverterView @JvmOverloads constructor(
     private val groupingSeparator: String get() = formatter.groupingSeparator
 
     private var unitChangedListener: OnUnitChangedListener? = null
+
+    /**
+     * Both ways: the row last typed into is the input, the other one is computed from it. Moving the focus to the
+     * other row changes nothing until a key edits it: a digit there starts a new number, Back or the sign edit its
+     * shown value ([startEditingFocusedRow]).
+     */
+    private var inputTop = true
+    private var focusedTop = true
+    private val inputText get() = if (inputTop) binding.topUnitText else binding.bottomUnitText
+    private val outputText get() = if (inputTop) binding.bottomUnitText else binding.topUnitText
+    private val inputUnit get() = if (inputTop) topUnit else bottomUnit
+    private val outputUnit get() = if (inputTop) bottomUnit else topUnit
 
     override fun onFinishInflate() {
         super.onFinishInflate()
@@ -77,6 +90,8 @@ class ConverterView @JvmOverloads constructor(
         topUnit = converter.defaultTopUnit
         bottomUnit = converter.defaultBottomUnit
 
+        inputTop = true
+        focusedTop = true
         binding.topUnitText.text = "0"
         updateBottomValue()
         updateUnitLabelsAndSymbols()
@@ -130,19 +145,40 @@ class ConverterView @JvmOverloads constructor(
         }
     }
 
+    /** The upper or lower row got the focus: the next key typed edits that one (see [startEditingFocusedRow]). */
+    fun setInputRow(top: Boolean) {
+        focusedTop = top
+    }
+
+    /**
+     * Makes the focused row the input. A new number ([newNumber], when a digit is typed) replaces its computed value,
+     * otherwise (Back, the sign) the shown value is edited.
+     */
+    private fun startEditingFocusedRow(newNumber: Boolean) {
+        if (focusedTop == inputTop) {
+            return
+        }
+        inputTop = focusedTop
+        if (newNumber) {
+            inputText.text = "0"
+        }
+    }
+
     fun clear() {
-        binding.topUnitText.text = "0"
+        startEditingFocusedRow(newNumber = true)
+        inputText.text = "0"
         updateBottomValue()
     }
 
     fun deleteCharacter() {
+        startEditingFocusedRow(newNumber = false)
         try {
-            val currentText = binding.topUnitText.text.toString()
+            val currentText = inputText.text.toString()
             if (currentText.length == 1) {
-                binding.topUnitText.text = "0"
+                inputText.text = "0"
             } else {
                 if (currentText.startsWith("-") && currentText.length == 2) {
-                    binding.topUnitText.text = "0"
+                    inputText.text = "0"
                 } else {
                     var newValue = currentText.dropLast(1)
                     newValue = newValue.trimEnd(groupingSeparator.single())
@@ -156,22 +192,24 @@ class ConverterView @JvmOverloads constructor(
                         // Return zero if input cannot be parsed as a valid number
                         BigDecimal.ZERO
                     }
-                    binding.topUnitText.text = formatter.bigDecimalToString(value)
+                    inputText.text = formatter.bigDecimalToString(value)
                 }
             }
             updateBottomValue()
         } catch (_: Exception) {
-            binding.topUnitText.text = "0"
-            binding.bottomUnitText.text = "0"
+            inputText.text = "0"
+            outputText.text = "0"
         }
     }
 
     fun typeDigit(digit: Int) {
+        startEditingFocusedRow(newNumber = true)
         if (digit == 0) zeroClicked() else addDigit(digit)
         updateBottomValue()
     }
 
     fun typeDecimalPoint() {
+        startEditingFocusedRow(newNumber = true)
         decimalClicked()
         updateBottomValue()
     }
@@ -202,19 +240,20 @@ class ConverterView @JvmOverloads constructor(
     val bottomUnitRow: View get() = binding.bottomUnitHolder
 
     val currentConverter: Converter? get() = converter
-    val currentTopUnit: Converter.Unit? get() = topUnit
+    /** The unit of the focused row, the one the next key edits. */
+    val currentFocusedUnit: Converter.Unit? get() = if (focusedTop) topUnit else bottomUnit
 
-    /** The computed lower value, null if there's none (nothing typed yet). */
-    fun bottomValue(): BigDecimal? = try {
-        formatter.removeGroupingSeparator(binding.bottomUnitText.text.toString()).toBigDecimal()
+    /** The computed value (of the row not typed into), null if there's none. */
+    fun computedValue(): BigDecimal? = try {
+        formatter.removeGroupingSeparator(outputText.text.toString()).toBigDecimal()
     } catch (_: NumberFormatException) {
         null
     }
 
-    val isEmpty get() = binding.topUnitText.text.toString() == "0"
+    val isEmpty get() = inputText.text.toString() == "0"
 
     private fun decimalClicked() {
-        var value = binding.topUnitText.text.toString()
+        var value = inputText.text.toString()
         if (!value.contains(decimalSeparator)) {
             when (value) {
                 "0" -> value = "0$decimalSeparator"
@@ -222,25 +261,25 @@ class ConverterView @JvmOverloads constructor(
                 else -> value += decimalSeparator
             }
 
-            binding.topUnitText.text = value
+            inputText.text = value
         }
     }
 
     private fun zeroClicked() {
-        val value = binding.topUnitText.text
+        val value = inputText.text
         if (value != "0" || value.contains(decimalSeparator)) {
             addDigit(0)
         }
     }
 
     private fun addDigit(digit: Int) {
-        var value = binding.topUnitText.text.toString()
+        var value = inputText.text.toString()
         if (value == "0") {
             value = digit.toString()
         } else {
             value += digit
         }
-        binding.topUnitText.text = formatter.formatForDisplay(value)
+        inputText.text = formatter.formatForDisplay(value)
     }
 
     fun switch() {
@@ -284,16 +323,17 @@ class ConverterView @JvmOverloads constructor(
         binding.bottomUnitSymbol.requestLayout()
     }
 
+    /** Computes the row not typed into from the one typed into. */
     private fun updateBottomValue() {
         converter?.apply {
-            val rawText = binding.topUnitText.text.toString()
+            val rawText = inputText.text.toString()
             val clampedText = checkTemperatureLimits(rawText)
             if (clampedText != rawText) {
-                binding.topUnitText.text = clampedText
+                inputText.text = clampedText
             }
 
             @Suppress("SwallowedException")
-            val topValue = try {
+            val inputValue = try {
                 formatter.removeGroupingSeparator(clampedText).toBigDecimal()
             } catch (_: NumberFormatException) {
                 // Return zero if input cannot be parsed as a valid number
@@ -301,11 +341,11 @@ class ConverterView @JvmOverloads constructor(
             }
 
             if (key == TemperatureConverter.key) {
-                when (topUnit?.key) {
+                when (inputUnit?.key) {
                     TemperatureConverter.Unit.Kelvin.key,
                     TemperatureConverter.Unit.Rankine.key -> {
-                        if (topValue < BigDecimal.ZERO) {
-                            binding.topUnitText.text = "0"
+                        if (inputValue < BigDecimal.ZERO) {
+                            inputText.text = "0"
                             return
                         }
                     }
@@ -313,8 +353,8 @@ class ConverterView @JvmOverloads constructor(
             }
 
             // For unit conversion, now using BigDecimal throughout
-            val converted = convert(topUnit!!.withValue(topValue), bottomUnit!!).value
-            binding.bottomUnitText.text = formatter.bigDecimalToString(converted)
+            val converted = convert(inputUnit!!.withValue(inputValue), outputUnit!!).value
+            outputText.text = formatter.bigDecimalToString(converted)
         }
     }
 
@@ -355,11 +395,14 @@ class ConverterView @JvmOverloads constructor(
     fun saveState(): Bundle = Bundle().apply {
         putInt(TOP_UNIT, converter!!.units.indexOf(topUnit!!))
         putInt(BOTTOM_UNIT, converter!!.units.indexOf(bottomUnit!!))
-        putString(CONVERTER_VALUE, binding.topUnitText.text.toString())
+        putString(CONVERTER_VALUE, inputText.text.toString())
+        putBoolean(CONVERTER_INPUT_TOP, inputTop)
     }
 
     fun restoreFromSavedState(state: Bundle) {
-        binding.topUnitText.text = state.getString(CONVERTER_VALUE)
+        inputTop = state.getBoolean(CONVERTER_INPUT_TOP, true)
+        focusedTop = inputTop
+        inputText.text = state.getString(CONVERTER_VALUE)
         val storedTopUnit = converter!!.units[state.getInt(TOP_UNIT)]
         val storedBottomUnit = converter!!.units[state.getInt(BOTTOM_UNIT)]
         updateUnits(storedTopUnit, storedBottomUnit)
@@ -375,7 +418,8 @@ class ConverterView @JvmOverloads constructor(
     }
 
     fun toggleNegative() {
-        var value = binding.topUnitText.text.toString()
+        startEditingFocusedRow(newNumber = false)
+        var value = inputText.text.toString()
 
         value = when {
             value == "0" -> "-"
@@ -383,7 +427,7 @@ class ConverterView @JvmOverloads constructor(
             else -> "-$value"
         }
 
-        binding.topUnitText.text = value
+        inputText.text = value
         updateBottomValue()
     }
 
@@ -398,7 +442,7 @@ class ConverterView @JvmOverloads constructor(
             return value
         }
 
-        return when (topUnit?.key) {
+        return when (inputUnit?.key) {
             TemperatureConverter.Unit.Celsius.key -> {
                 val minCelsius = BigDecimal("-273.15")
                 if (numericValue < minCelsius) formatter.bigDecimalToString(minCelsius) else value

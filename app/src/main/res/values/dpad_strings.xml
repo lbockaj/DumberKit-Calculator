@@ -4,7 +4,7 @@
     <string name="dpad_calculator_empty">Type a calculation with the keypad. Your calculations will be listed here.</string>
     <string name="dpad_error_invalid">Incomplete calculation</string>
     <string name="dpad_error_too_big">The number is too big</string>
-    <string name="dpad_more_functions">More functions (hold *)</string>
+    <string name="dpad_more_functions">Symbols and functions (hold *)</string>
     <string name="dpad_clear_history">Clear history</string>
     <string name="dpad_clear_history_question">Delete all calculations from the history?</string>
     <string name="dpad_function_sign">±  Negative number</string>
