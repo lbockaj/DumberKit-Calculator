@@ -104,6 +104,14 @@ android {
     androidResources {
         @Suppress("UnstableApiUsage")
         generateLocaleConfig = true
+        // the same languages as DumberKit: Contacts (those with a real translation of Commons), the others would show up
+        // mostly in English anyway; regional variants fall back to the main language
+        localeFilters += listOf(
+            "en", "en-rGB", "ar", "az", "be", "bg", "bs", "ca", "cs", "cy", "da", "de", "el", "eo", "es", "et", "eu",
+            "fa", "fi", "fr", "ga", "gl", "hi-rIN", "hr", "hu", "ia", "in", "it", "iw", "ja", "kab", "ko-rKR", "lt",
+            "nb-rNO", "nl", "oc", "pa-rPK", "pl", "pt", "pt-rBR", "pt-rPT", "ro", "ru", "sk", "sl", "sr", "sv", "ta",
+            "tr", "uk", "vi", "zh-rCN", "zh-rHK", "zh-rTW"
+        )
     }
 
     tasks.withType<KotlinCompile> {

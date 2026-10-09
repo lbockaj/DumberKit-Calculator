@@ -18,5 +18,9 @@ First release, based on Fossify Calculator 1.4.0.
 - Settings and an About screen with all the keys, made for keypad navigation
 - Blue app icon by default; picking a theme keeps the icon color
 
+### Changed
+- Smaller app (APK 5.4 → 3.2 MB): Commons' own About, license, FAQ, contributors, donation and blocked numbers
+  screens, never opened here, are left out, and only languages with a real translation are included
+
 ### Removed
 - The on-screen button pad and the home screen widget
