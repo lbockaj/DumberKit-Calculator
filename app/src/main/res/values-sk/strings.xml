@@ -5,9 +5,6 @@
     <string name="unit_converter">Prevodník jednotiek</string>
     <string name="swap_units">Vymeniť jednotky</string>
     <string name="formula_divide_by_zero_error">Chyba: delenie nulou</string>
-    <string name="history">História</string>
-    <string name="history_empty">História je prázdna</string>
-    <string name="clear_history">Vymazať</string>
     <string name="history_cleared">História bola vymazaná</string>
     <string name="vibrate_on_button_press">Vibrovať pri stlačení tlačidla</string>
     <string name="unit_length">Dĺžka</string>
@@ -72,8 +69,6 @@
     <string name="unit_time_day">Deň</string>
     <string name="unit_time_week">Týždeň</string>
     <string name="unit_time_year">Rok</string>
-    <string name="faq_1_title">Ako funguje tlačidlo C?</string>
-    <string name="faq_1_text">Jedným stlačením viete vymazať 1 znak. Dlhé podržanie vymaže všetky polia naraz.</string>
     <string name="unit_length_kilometer">Kilometer</string>
     <string name="unit_length_meter">Meter</string>
     <string name="unit_length_centimeter">Centimeter</string>

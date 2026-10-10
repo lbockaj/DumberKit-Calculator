@@ -2,5 +2,4 @@
     <dimen name="button_layout_margin">@dimen/activity_margin</dimen>
 
     <dimen name="button_text_size">42sp</dimen>
-    <dimen name="display_text_size">60sp</dimen>
 </resources>

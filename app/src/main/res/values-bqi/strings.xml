@@ -5,9 +5,6 @@
     <string name="unit_converter">موبدل واهڌ</string>
     <string name="swap_units">آلشت واهڌا</string>
     <string name="formula_divide_by_zero_error">ختا: تقسیم ری سفر</string>
-    <string name="history">ویرگار</string>
-    <string name="history_empty">ویرگار پتی هڌ</string>
-    <string name="clear_history">پاک کردن</string>
     <string name="history_cleared">ویرگار پاک وابی</string>
     <string name="unit_length">تۊل</string>
     <string name="unit_length_kilometer">کیلۊمتر</string>
@@ -92,6 +89,4 @@
     <string name="unit_time_day">رۊز</string>
     <string name="unit_time_week">هفته</string>
     <string name="unit_time_year">سال</string>
-    <string name="faq_1_title">دویمه C (پاک کردن) چتاور کار اکونه؟</string>
-    <string name="faq_1_text">وا زیڌن ری هو، کاراکترا یکی یکی پاک ابۊن. وا زیڌن ریس وو واڌاشتنس، پوی فیلدا وا یک وورنشۊوی ابۊن.</string>
 </resources>

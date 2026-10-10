@@ -5,9 +5,6 @@
     <string name="unit_converter">Enhetsomvandlare</string>
     <string name="swap_units">Byt enheter</string>
     <string name="formula_divide_by_zero_error">Fel: delning med noll</string>
-    <string name="history">Historik</string>
-    <string name="history_empty">Historiken är tom</string>
-    <string name="clear_history">Rensa</string>
     <string name="history_cleared">Historiken har rensats</string>
     <string name="vibrate_on_button_press">Vibrera vid knapptryck</string>
     <string name="unit_length">Längd</string>
@@ -53,8 +50,6 @@
     <string name="unit_time_day">Dygn</string>
     <string name="unit_time_week">Vecka</string>
     <string name="unit_time_year">År</string>
-    <string name="faq_1_title">Hur fungerar knappen C (Rensa)?</string>
-    <string name="faq_1_text">Om du trycker på den tar du bort ett tecken i taget. Om du trycker länge på den återställs alla fält på en gång.</string>
     <string name="unit_length_parsec">Parsec</string>
     <string name="unit_mass_grain">Grain</string>
     <string name="unit_length_yard">Yard</string>

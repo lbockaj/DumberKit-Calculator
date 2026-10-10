@@ -1,6 +1,5 @@
-# DumberKit: App.kt keeps the launcher icon color when a ready-made theme is picked, through these private members
+# Customization screen: its themes keep the launcher icon color (helpers/KeepIconColor.kt)
 -keepclassmembers class org.fossify.commons.activities.CustomizationActivity {
+    private java.util.LinkedHashMap predefinedThemes;
     private int curAppIconColor;
-    private int originalAppIconColor;
-    private void pickAppIconColor();
 }

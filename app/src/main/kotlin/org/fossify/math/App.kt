@@ -17,8 +17,6 @@ import org.fossify.commons.activities.CustomizationActivity
 import org.fossify.commons.extensions.applyColorFilter
 import org.fossify.commons.extensions.baseConfig
 import org.fossify.commons.extensions.checkAppIconColor
-import org.fossify.commons.extensions.getProperBackgroundColor
-import org.fossify.commons.extensions.setFillWithStroke
 import org.fossify.commons.helpers.IS_SYSTEM_THEME_ENABLED
 import org.fossify.commons.helpers.PREFS_KEY
 import org.fossify.commons.helpers.SIDELOADING_FALSE
@@ -26,6 +24,7 @@ import org.fossify.commons.views.MyAppBarLayout
 import org.fossify.math.helpers.applyDpadFocusHighlight
 import org.fossify.math.helpers.dpadCompactTopBar
 import org.fossify.math.helpers.ignoreTouches
+import org.fossify.math.helpers.keepIconColorWithThemes
 
 private const val BLUE_ICON_SET = "dumberkit_blue_icon"
 private const val ICON_ALIASES_RENAMED = "dumberkit_icon_aliases_renamed"
@@ -56,7 +55,12 @@ class App : FossifyApp() {
                 }
             }
 
-            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {}
+            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
+                // runs inside the screen's own onCreate, before it sets up its themes
+                if (activity is CustomizationActivity) {
+                    activity.keepIconColorWithThemes()
+                }
+            }
             override fun onActivityStarted(activity: Activity) {}
             override fun onActivityPaused(activity: Activity) {}
             override fun onActivityStopped(activity: Activity) {}
@@ -67,7 +71,6 @@ class App : FossifyApp() {
 
     /** Compact always-colored top bar, and Cancel / Save rows at the end instead of the toolbar's check icon. */
     private fun setupCustomizationForKeys(activity: CustomizationActivity) {
-        keepIconColorOnThemeChange(activity)
         val appBar = activity.findViewById<MyAppBarLayout>(org.fossify.commons.R.id.app_bar)
         val scrollView = activity.findViewById<NestedScrollView>(org.fossify.commons.R.id.customization_nested_scrollview)
         if (appBar != null) {
@@ -109,55 +112,6 @@ class App : FossifyApp() {
 
         holder.findViewById<ImageView>(R.id.dpad_save_row_icon)?.applyColorFilter(ContextCompat.getColor(activity, R.color.dpad_save_green))
         holder.findViewById<ImageView>(R.id.dpad_cancel_row_icon)?.applyColorFilter(ContextCompat.getColor(activity, R.color.dpad_cancel_red))
-    }
-
-    /**
-     * Commons' ready-made themes (Light, Dark…) also set the launcher icon to their own color, usually green, and saving
-     * then changes the icon on the phone. The icon color changes here only when picked in its own row; after a theme
-     * pick it's put back. Commons keeps it in private fields, see proguard-rules.pro.
-     */
-    private fun keepIconColorOnThemeChange(activity: CustomizationActivity) {
-        val iconHolder = activity.findViewById<View>(org.fossify.commons.R.id.customization_app_icon_color_holder) ?: return
-        val iconPreview = activity.findViewById<ImageView>(org.fossify.commons.R.id.customization_app_icon_color) ?: return
-        if (iconHolder.getTag(R.id.dpad_focus_prepared) == true) {
-            return
-        }
-
-        val fields = try {
-            val type = CustomizationActivity::class.java
-            Triple(
-                type.getDeclaredField("curAppIconColor").apply { isAccessible = true },
-                type.getDeclaredField("originalAppIconColor").apply { isAccessible = true },
-                type.getDeclaredMethod("pickAppIconColor").apply { isAccessible = true }
-            )
-        } catch (ignored: Exception) {
-            // another Commons version: its own behavior stays
-            return
-        }
-        val (current, original, pick) = fields
-        var pickedByUser = false
-        iconHolder.setTag(R.id.dpad_focus_prepared, true)
-        iconHolder.setOnClickListener {
-            pickedByUser = true
-            pick.invoke(activity)
-        }
-
-        var wantedColor: Int? = null
-        iconHolder.rootView.viewTreeObserver.addOnPreDrawListener {
-            val wanted = wantedColor ?: original.getInt(activity)
-            val color = current.getInt(activity)
-            if (color != wanted) {
-                if (pickedByUser) {
-                    // a color from the icon row itself stays, also through later theme picks
-                    wantedColor = color
-                    pickedByUser = false
-                } else {
-                    current.setInt(activity, wanted)
-                    iconPreview.setFillWithStroke(wanted, activity.getProperBackgroundColor())
-                }
-            }
-            true
-        }
     }
 
     private fun prepareForKeys(activity: Activity) {

@@ -5,9 +5,6 @@
     <string name="unit_converter">Conversor de unidades</string>
     <string name="swap_units">Trocar unidades</string>
     <string name="formula_divide_by_zero_error">Erro: divisão por zero</string>
-    <string name="history">Histórico</string>
-    <string name="history_empty">Histórico vazio</string>
-    <string name="clear_history">Limpar</string>
     <string name="history_cleared">O histórico foi limpo</string>
     <string name="vibrate_on_button_press">Vibrar ao pressionar um botão</string>
     <string name="unit_length">Comprimento</string>
@@ -24,8 +21,6 @@
     <string name="unit_volume_centiliter">Centilitros</string>
     <string name="unit_volume_deciliter">Decilitros</string>
     <string name="unit_volume_milliliter">Mililitros</string>
-    <string name="faq_1_title">Como funciona o botão C (limpar)\?</string>
-    <string name="faq_1_text">Ao tocar uma vez, os caracteres serão apagados um a um. Um toque longo apaga todos os caracteres de uma vez.</string>
     <string name="unit_area_square_millimeter">Milímetros quadrados</string>
     <string name="unit_area_hectare">Hectares</string>
     <string name="unit_volume_barrel_us">Barril (EUA)</string>

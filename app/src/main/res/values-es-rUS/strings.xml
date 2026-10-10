@@ -5,9 +5,6 @@
     <string name="unit_converter">Convertidor de unidades</string>
     <string name="swap_units">Intercambiar unidades</string>
     <string name="formula_divide_by_zero_error">Error: división por cero</string>
-    <string name="history">Historial</string>
-    <string name="history_empty">El historial está vacío</string>
-    <string name="clear_history">Limpiar</string>
     <string name="history_cleared">El historial ha sido limpiado</string>
     <string name="vibrate_on_button_press">Vibrar al pulsar el botón</string>
     <string name="unit_length">Longitud</string>
@@ -127,6 +124,4 @@
     <string name="unit_energy_therm">Therm</string>
     <string name="unit_energy_foot_pound">Pie-libra</string>
     <string name="unit_energy_erg">Ergio</string>
-    <string name="faq_1_title">¿Cómo funciona el botón C (Clear)?</string>
-    <string name="faq_1_text">Al tocarla, se elimina un carácter a la vez. Al mantenerla presionada, se reinician todos los campos a la vez.</string>
 </resources>

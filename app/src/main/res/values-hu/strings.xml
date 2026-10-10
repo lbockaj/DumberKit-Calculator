@@ -5,9 +5,6 @@
     <string name="unit_converter">Mértékegységváltó</string>
     <string name="swap_units">Mértékegységek felcserélése</string>
     <string name="formula_divide_by_zero_error">Hiba: nullával való osztás</string>
-    <string name="history">Előzmények</string>
-    <string name="history_empty">Nincsenek előzmények</string>
-    <string name="clear_history">Törlés</string>
     <string name="history_cleared">Az előzmények törlésre kerültek</string>
     <string name="vibrate_on_button_press">Rezgés gombnyomáskor</string>
     <string name="unit_length">Hossz</string>
@@ -73,8 +70,6 @@
     <string name="unit_time_day">Nap</string>
     <string name="unit_time_week">Hét</string>
     <string name="unit_time_year">Év</string>
-    <string name="faq_1_title">Hogyan működik a C (törlés) gomb\?</string>
-    <string name="faq_1_text">A koppintás egyszerre egy karaktert töröl. A hosszú lenyomás egyszerre állítja alaphelyzetbe az összes mezőt.</string>
     <string name="unit_mass_tonne">Tonna</string>
     <string name="unit_area_acre">Hold</string>
     <string name="unit_length_yard">Yard</string>

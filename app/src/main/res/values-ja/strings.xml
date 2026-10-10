@@ -3,13 +3,8 @@
     <string name="app_launcher_name">電卓</string>
     <string name="scientific_calculator">科学計算電卓</string>
     <string name="formula_divide_by_zero_error">エラー：ゼロによる除算</string>
-    <string name="history">履歴</string>
-    <string name="history_empty">履歴はありません</string>
-    <string name="clear_history">クリア</string>
     <string name="history_cleared">履歴をクリアしました</string>
     <string name="vibrate_on_button_press">ボタンを押した時に振動</string>
-    <string name="faq_1_title">C (クリア) ボタンはどのように機能しますか？</string>
-    <string name="faq_1_text">ボタンをタップするたびに1文字ずつ削除されます。ボタンを長押しするとすべてのフィールドがリセットされます。</string>
     <string name="unit_mass_pound">ポンド</string>
     <string name="unit_mass_microgram">マイクログラム</string>
     <string name="unit_volume_cubic_inch">立方インチ</string>

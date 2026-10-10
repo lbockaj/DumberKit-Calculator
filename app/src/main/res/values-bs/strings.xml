@@ -5,9 +5,6 @@
     <string name="unit_converter">Pretvarač jedinica</string>
     <string name="swap_units">Zamijeni jedinice</string>
     <string name="formula_divide_by_zero_error">Greška: dijeljenje s nulom</string>
-    <string name="history">Historija</string>
-    <string name="history_empty">Historija je prazna</string>
-    <string name="clear_history">Izbriši</string>
     <string name="history_cleared">Historija je izbrisana</string>
     <string name="vibrate_on_button_press">Vibriraj prilikom pritiskanja gumba</string>
     <string name="unit_length">Dužina</string>
@@ -81,8 +78,6 @@
     <string name="unit_time_day">Dan</string>
     <string name="unit_time_week">Sedmica</string>
     <string name="unit_time_year">Godina</string>
-    <string name="faq_1_title">Kako funkcionira gumb C (Izbriši)\?</string>
-    <string name="faq_1_text">Dodirom gumba uklanjaju se znakovi jedan po jedan. Dugim pritiskom gumba brišu se svi znakovi.</string>
     <string name="unit_temperature_rankine">Rankin</string>
     <string name="unit_length_fathom">Fatom</string>
     <string name="unit_mass_grain">Zrno</string>

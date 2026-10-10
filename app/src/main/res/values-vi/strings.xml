@@ -12,14 +12,11 @@
     <string name="unit_volume_milliliter">Mililít</string>
     <string name="unit_volume_cubic_foot">Phút khối</string>
     <string name="unit_volume_cubic_inch">Insơ khối</string>
-    <string name="faq_1_text">Nhấn vào nó sẽ xóa từng ký tự một. Nhấn và giữ nó sẽ thiết lập lại tất cả các khung cùng một lúc.</string>
     <string name="unit_time_second">Giây</string>
     <string name="scientific_calculator">Máy tính khoa học</string>
     <string name="unit_converter">Bộ chuyển đổi đơn vị</string>
     <string name="swap_units">Hoán đổi đơn vị</string>
     <string name="formula_divide_by_zero_error">Lỗi: phép chia cho số 0</string>
-    <string name="history">Lịch sử</string>
-    <string name="history_empty">Lịch sử trống rỗng</string>
     <string name="history_cleared">Lịch sử đã bị xóa</string>
     <string name="vibrate_on_button_press">Rung khi nhấn nút</string>
     <string name="unit_length">Chiều dài</string>
@@ -39,7 +36,6 @@
     <string name="unit_length_centimeter">Xăngtimét</string>
     <string name="unit_length_yard">Thước Anh</string>
     <string name="unit_length_foot">Phút</string>
-    <string name="clear_history">Xóa</string>
     <string name="unit_area_square_kilometer">Kílômét vuông</string>
     <string name="unit_area_square_centimeter">Xăngtimét vuông</string>
     <string name="unit_area_square_millimeter">Milimét vuông</string>
@@ -87,5 +83,4 @@
     <string name="unit_time_day">Ngày</string>
     <string name="unit_time_week">Tuần</string>
     <string name="unit_time_year">Năm</string>
-    <string name="faq_1_title">Nút C (Xóa) hoạt động như thế nào?</string>
 </resources>

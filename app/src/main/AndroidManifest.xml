@@ -15,8 +15,12 @@
         android:name="android.hardware.faketouch"
         android:required="false" />
 
+    <!-- enableOnBackInvokedCallback off: Back is a key that deletes characters here, it must keep coming as a key event
+         on newer Android versions too (predictive back would take it away from the app) -->
     <application
         android:name="org.fossify.math.App"
+        android:enableOnBackInvokedCallback="false"
+        tools:targetApi="33"
         android:allowBackup="true"
         android:appCategory="productivity"
         android:icon="@mipmap/ic_launcher_blue"

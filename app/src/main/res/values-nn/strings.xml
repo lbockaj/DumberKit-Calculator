@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_launcher_name">Kalkulator</string>
-    <string name="history">Historikk</string>
-    <string name="history_empty">Historikken er tom</string>
-    <string name="clear_history">Tøm</string>
 </resources>

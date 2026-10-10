@@ -9,7 +9,6 @@
     <dimen name="dpad_expression_text_size">40sp</dimen>
     <dimen name="dpad_expression_min_height">56dp</dimen>
     <dimen name="dpad_preview_text_size">18sp</dimen>
-    <dimen name="dpad_preview_min_height">30dp</dimen>
     <dimen name="dpad_hint_text_size">12sp</dimen>
     <dimen name="dpad_history_formula_size">14sp</dimen>
     <dimen name="dpad_history_result_size">17sp</dimen>
@@ -22,7 +21,6 @@
     <dimen name="dpad_home_row_height">52dp</dimen>
     <dimen name="dpad_home_icon_size">26dp</dimen>
     <dimen name="dpad_home_text_size">18sp</dimen>
-    <dimen name="dpad_home_status_text_size">15sp</dimen>
     <color name="dpad_save_green">#43A047</color>
     <color name="dpad_cancel_red">#E53935</color>
     <dimen name="dpad_settings_row_height">52dp</dimen>
@@ -62,15 +60,6 @@
         <item name="android:maxLines">1</item>
         <item name="android:ellipsize">end</item>
         <item name="android:textSize">@dimen/dpad_home_text_size</item>
-    </style>
-
-    <style name="DpadHomeRowStatus">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">@dimen/medium_margin</item>
-        <item name="android:maxLines">1</item>
-        <item name="android:textSize">@dimen/dpad_home_status_text_size</item>
-        <item name="android:alpha">0.7</item>
     </style>
 
     <!-- popup menus: AndroidX PopupMenu reads popupMenuStyle (not android:popupMenuStyle like Commons' styles) -->

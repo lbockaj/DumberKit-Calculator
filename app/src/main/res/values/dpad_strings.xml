@@ -26,7 +26,6 @@
     <string name="dpad_key_ok" translatable="false">OK</string>
     <string name="dpad_key_up_down" translatable="false">↑ / ↓</string>
     <string name="dpad_key_left_right" translatable="false">← / →</string>
-    <string name="dpad_key_left" translatable="false">←</string>
     <string name="dpad_key_digits" translatable="false">0–9</string>
     <string name="dpad_key_star" translatable="false">*</string>
     <string name="dpad_key_pound" translatable="false">#</string>

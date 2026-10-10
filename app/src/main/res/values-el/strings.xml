@@ -5,9 +5,6 @@
     <string name="unit_converter">Μετατροπέας μονάδων</string>
     <string name="swap_units">Εναλλαγή μονάδων</string>
     <string name="formula_divide_by_zero_error">Σφάλμα: διαίρεση με μηδέν</string>
-    <string name="history">Ιστορικό</string>
-    <string name="history_empty">Το Ιστορικό είναι άδειο</string>
-    <string name="clear_history">Εκκαθάριση</string>
     <string name="history_cleared">Το Ιστορικό εκκαθαρίστηκε</string>
     <string name="vibrate_on_button_press">Δόνηση στο πάτημα πλήκτρου</string>
     <string name="unit_length">Μήκος</string>
@@ -78,8 +75,6 @@
     <string name="unit_time_day">Ημέρα</string>
     <string name="unit_time_week">Εβδομάδα</string>
     <string name="unit_time_year">Έτος</string>
-    <string name="faq_1_title">Πώς λειτουργεί το κουμπί C (Καθαρισμός);</string>
-    <string name="faq_1_text">Πατώντας θα αφαιρείται ένας χαρακτήρας τη φορά. Πατώντας παρατεταμένα θα γίνει επαναφορά όλων των πεδίων ταυτόχρονα.</string>
     <string name="unit_length_angstrom">Άνγκστρομ</string>
     <string name="unit_length_fathom">Οργυιά</string>
     <string name="unit_length_parsec">Παρσέκ</string>

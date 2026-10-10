@@ -5,9 +5,6 @@
     <string name="unit_converter">Halbeeg roge</string>
     <string name="swap_units">Halbeegyada wareeji</string>
     <string name="formula_divide_by_zero_error">Cillad: eber uqaybin</string>
-    <string name="history">Sooyaal</string>
-    <string name="history_empty">Sooyaal maran</string>
-    <string name="clear_history">Tirtir</string>
     <string name="history_cleared">Sooyaalku waa la tirtiray</string>
     <string name="vibrate_on_button_press">Gariir marka badhanka la taabto</string>
     <string name="unit_length">Dherer</string>
@@ -80,8 +77,6 @@
     <string name="unit_time_day">Maalin</string>
     <string name="unit_time_week">Todobaad</string>
     <string name="unit_time_year">Sanad</string>
-    <string name="faq_1_title">Sidee buu badhanka C (Tirtir) ushaqeeyaa?</string>
-    <string name="faq_1_text">Gujintu waxay tirtiri hal god markiiba. Gujinta la xajiyo waxay markiiba faarujin goobaha oo idil.</string>
     <string name="unit_volume_quart_imperial">Rubac Galaan (Ingiriis)</string>
     <string name="unit_volume_pint_us">Nus Litir (Mareykan)</string>
     <string name="unit_volume_pint_imperial">Nus Litir (Ingiriis)</string>

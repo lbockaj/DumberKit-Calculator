@@ -5,9 +5,6 @@
     <string name="unit_converter">Перетворення одиниць</string>
     <string name="swap_units">Поміняти місцями</string>
     <string name="formula_divide_by_zero_error">Помилка: ділення на нуль</string>
-    <string name="history">Історія</string>
-    <string name="history_empty">Історія порожня</string>
-    <string name="clear_history">Очистити</string>
     <string name="history_cleared">Історію очищено</string>
     <string name="vibrate_on_button_press">Вібрувати під час натискання кнопок</string>
     <string name="unit_length">Довжина</string>
@@ -35,8 +32,6 @@
     <string name="unit_area_square_inch">Квадратний дюйм</string>
     <string name="unit_area_hectare">Гектар</string>
     <string name="unit_volume_cubic_meter">Кубічний метр</string>
-    <string name="faq_1_title">Як працює кнопка C (Очистити)?</string>
-    <string name="faq_1_text">Натискання на кнопку видалятиме один символ за раз. Затискання очистить всі поля одразу.</string>
     <string name="unit_length_mile">Миля</string>
     <string name="unit_length_yard">Ярд</string>
     <string name="unit_volume_centiliter">Сантилітр</string>

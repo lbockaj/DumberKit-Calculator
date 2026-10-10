@@ -5,9 +5,6 @@
     <string name="unit_converter">Eenheden omzetten</string>
     <string name="swap_units">Eenheden omwisselen</string>
     <string name="formula_divide_by_zero_error">Fout: delen door nul</string>
-    <string name="history">Geschiedenis</string>
-    <string name="history_empty">Geschiedenis is leeg</string>
-    <string name="clear_history">Wissen</string>
     <string name="history_cleared">Geschiedenis is gewist</string>
     <string name="vibrate_on_button_press">Trillen bij het indrukken van toetsen</string>
     <string name="unit_length">Lengte</string>
@@ -57,8 +54,6 @@
     <string name="unit_time_millisecond">Milliseconde</string>
     <string name="unit_time_day">Dag</string>
     <string name="unit_time_year">Jaar</string>
-    <string name="faq_1_title">Hoe werkt de knop C (Clear)\?</string>
-    <string name="faq_1_text">Kort indrukken verwijdert één karakter per keer. Lang drukken wist direct alle velden.</string>
     <string name="unit_volume_gallon_imperial">Gallon (Engels)</string>
     <string name="unit_volume_quart_imperial">Quart (Engels)</string>
     <string name="unit_volume_pint_imperial">Pint (Engels)</string>

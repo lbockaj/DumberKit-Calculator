@@ -1,5 +1,6 @@
 package org.fossify.math.activities
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -251,6 +252,8 @@ class MainActivity : SimpleActivity() {
         config.dpadExpressionIsResult = input.isResult
     }
 
+    // Back is handled as a key on purpose (it deletes), predictive back is off in the manifest
+    @SuppressLint("GestureBackNavigation")
     override fun dispatchKeyEvent(event: KeyEvent): Boolean {
         val isDown = event.action == KeyEvent.ACTION_DOWN
         val isFirstDown = isDown && event.repeatCount == 0

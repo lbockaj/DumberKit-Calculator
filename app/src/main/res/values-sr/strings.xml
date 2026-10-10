@@ -5,9 +5,6 @@
     <string name="unit_converter">Претварач јединица</string>
     <string name="swap_units">Замени јединице</string>
     <string name="formula_divide_by_zero_error">Грешка: дељење нулом</string>
-    <string name="history">Историја</string>
-    <string name="history_empty">Историја је празна</string>
-    <string name="clear_history">Очисти</string>
     <string name="history_cleared">Историја је очишћена</string>
     <string name="vibrate_on_button_press">Вибрација при притиску на дугме</string>
     <string name="unit_length">Дужина</string>
@@ -90,8 +87,6 @@
     <string name="unit_time_day">Дан</string>
     <string name="unit_time_week">Недеља</string>
     <string name="unit_time_year">Година</string>
-    <string name="faq_1_title">Како функционише дугме C (Очисти)\?</string>
-    <string name="faq_1_text">Додиром на њега уклања се један по један знак. Дуг притисак ће ресетовати сва поља одједном.</string>
     <string name="unit_volume_customary_cup_us">Уобичајена шоља (САД)</string>
     <string name="unit_volume_legal_cup_us">Законски одређена шоља (САД)</string>
 </resources>

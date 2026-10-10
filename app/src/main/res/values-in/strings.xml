@@ -3,13 +3,8 @@
     <string name="app_launcher_name">Kalkulator</string>
     <string name="scientific_calculator">Kalkulator Sains</string>
     <string name="formula_divide_by_zero_error">Kesalahan: pembagian dengan nol</string>
-    <string name="history">Riwayat</string>
-    <string name="history_empty">Riwayat kosong</string>
-    <string name="clear_history">Hapus</string>
     <string name="history_cleared">Riwayat telah dihapus</string>
     <string name="vibrate_on_button_press">Getar saat tombol ditekan</string>
-    <string name="faq_1_title">Bagaimana tombol C (Clear) bekerja?</string>
-    <string name="faq_1_text">Menyentuhnya sekali akan menghapus satu karakter. Menyentuhnya lama akan mengosongkan seluruh ruas sekaligus.</string>
     <string name="unit_converter">Konverter satuan</string>
     <string name="swap_units">Tukar satuan</string>
     <string name="unit_length">Panjang</string>

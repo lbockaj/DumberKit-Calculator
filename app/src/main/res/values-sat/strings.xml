@@ -5,9 +5,6 @@
     <string name="unit_converter">ᱭᱩᱱᱤᱴ ᱠᱚᱱᱵᱷᱚᱴᱚᱨ</string>
     <string name="swap_units">ᱥᱣᱟᱯ ᱭᱩᱱᱤᱴ</string>
     <string name="formula_divide_by_zero_error">ᱦᱩᱰᱟᱹᱜ: ᱥᱩᱱ ᱛᱮ ᱦᱟᱹᱴᱤᱧ</string>
-    <string name="history">ᱱᱟᱜᱟᱢ</string>
-    <string name="history_empty">ᱱᱟᱜᱟᱢ ᱫᱚ ᱠᱷᱟᱹᱞᱤ ᱜᱮᱭᱟ</string>
-    <string name="clear_history">ᱯᱷᱟᱨᱪᱟ</string>
     <string name="history_cleared">ᱱᱟᱜᱟᱢ ᱯᱷᱟᱨᱪᱟ ᱮᱱᱟ</string>
     <string name="vibrate_on_button_press">ᱵᱩᱛᱟᱢ ᱞᱤᱱ ᱞᱮᱠᱷᱟᱱ ᱵᱷᱟᱭᱵᱨᱮᱴᱚᱜᱼᱟ</string>
     <string name="unit_length">ᱡᱤᱞᱤᱧ</string>

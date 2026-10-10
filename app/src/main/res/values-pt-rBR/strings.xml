@@ -5,9 +5,6 @@
     <string name="unit_converter">Converter unidades</string>
     <string name="swap_units">Trocar unidades</string>
     <string name="formula_divide_by_zero_error">Erro: divisão por zero</string>
-    <string name="history">Histórico</string>
-    <string name="history_empty">O histórico está vazio</string>
-    <string name="clear_history">Apagar</string>
     <string name="history_cleared">O histórico foi apagado</string>
     <string name="vibrate_on_button_press">Vibrar ao pressionar um botão</string>
     <string name="unit_length">Comprimento</string>
@@ -58,8 +55,6 @@
     <string name="unit_time_millisecond">Milissegundo</string>
     <string name="unit_time_week">Semana</string>
     <string name="unit_time_year">Ano</string>
-    <string name="faq_1_title">Como funciona o botão C (Clear)\?</string>
-    <string name="faq_1_text">Um toque remove um caractere de cada vez. Um toque longo redefine todos os campos de uma vez.</string>
     <string name="unit_length_mile">Milha</string>
     <string name="unit_area">Área</string>
     <string name="unit_volume_liter">Litro</string>

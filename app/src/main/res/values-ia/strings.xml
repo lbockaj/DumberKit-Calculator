@@ -7,7 +7,6 @@
     <string name="unit_volume_cubic_meter">Metro cubic</string>
     <string name="unit_length_kilometer">KIlometro</string>
     <string name="unit_volume_cubic_centimeter">Centimetro cubic</string>
-    <string name="clear_history">Rader</string>
     <string name="unit_area_square_kilometer">Kilometro quadrate</string>
     <string name="unit_length_centimeter">Centimetro</string>
     <string name="unit_area_hectare">Hectar</string>
@@ -30,14 +29,12 @@
     <string name="unit_mass_microgram">Microgramma</string>
     <string name="unit_mass_tonne">Tonna</string>
     <string name="unit_volume_milliliter">Millilitro</string>
-    <string name="history_empty">Historia es vacue</string>
     <string name="unit_mass_ounce">Uncia</string>
     <string name="unit_mass_gram">Gramma</string>
     <string name="app_launcher_name">Calculator</string>
     <string name="unit_length_yard">Yard</string>
     <string name="unit_area">Area</string>
     <string name="unit_area_acre">Acre</string>
-    <string name="history">Historia</string>
     <string name="unit_length_nanometer">Nanometro</string>
     <string name="unit_length_fathom">Fathom</string>
     <string name="unit_length_nautical_mile">Millia nautic</string>

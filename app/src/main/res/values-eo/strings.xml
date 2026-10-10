@@ -4,16 +4,11 @@
     <string name="scientific_calculator">Scienca kalkulilo</string>
     <string name="formula_divide_by_zero_error">Eraro: divido per nul</string>
     <string name="vibrate_on_button_press">Vibrigi je butonpremo</string>
-    <string name="faq_1_title">Kiel funkcias la butono C («Forviŝi»)\?</string>
-    <string name="faq_1_text">Frapetado sur ĝi forviŝos signojn po unu por frapeto. Longa premado forviŝos ĉiujn kampojn samtempe.</string>
     <string name="unit_time_hour">Horo</string>
     <string name="unit_length_yard">Jardo</string>
     <string name="unit_converter">Konvertilo de unuoj</string>
     <string name="swap_units">Interŝanĝi unuojn</string>
-    <string name="history">Historio</string>
-    <string name="history_empty">La historio malplenas</string>
     <string name="history_cleared">La historio estis viŝita</string>
-    <string name="clear_history">Forviŝi</string>
     <string name="unit_length_kilometer">Kilometro</string>
     <string name="unit_length_meter">Metro</string>
     <string name="unit_length_centimeter">Centimetro</string>

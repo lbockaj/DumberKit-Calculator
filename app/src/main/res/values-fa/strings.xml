@@ -4,9 +4,6 @@
     <string name="unit_converter">مبدل واحد</string>
     <string name="swap_units">تعویض واحدها</string>
     <string name="formula_divide_by_zero_error">خطا: تقسیم بر صفر</string>
-    <string name="history">تاریخچه</string>
-    <string name="history_empty">تاریخچه خالی است</string>
-    <string name="clear_history">پاک کردن</string>
     <string name="unit_length_kilometer">کیلومتر</string>
     <string name="unit_length_meter">متر</string>
     <string name="unit_length_centimeter">سانتی‌متر</string>
@@ -127,6 +124,4 @@
     <string name="unit_energy_therm">ترم</string>
     <string name="unit_energy_foot_pound">فوت-پوند</string>
     <string name="unit_energy_erg">ارگ</string>
-    <string name="faq_1_title">دکمهٔ C (پاک کردن) چگونه کار می‌کند؟</string>
-    <string name="faq_1_text">با ضربه زدن روی آن، یک کاراکتر پاک می‌شود. با نگه داشتن طولانی آن، تمام فیلدها به‌یکباره بازنشانی می‌شوند.</string>
 </resources>

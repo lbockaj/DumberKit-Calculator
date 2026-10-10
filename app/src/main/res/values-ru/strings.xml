@@ -5,9 +5,6 @@
     <string name="unit_converter">Конвертер величин</string>
     <string name="swap_units">Поменять местами</string>
     <string name="formula_divide_by_zero_error">Ошибка: деление на ноль</string>
-    <string name="history">История</string>
-    <string name="history_empty">История пуста</string>
-    <string name="clear_history">Очистить</string>
     <string name="history_cleared">История очищена</string>
     <string name="vibrate_on_button_press">Вибрация при нажатии кнопок</string>
     <string name="unit_length">Длина</string>
@@ -81,8 +78,6 @@
     <string name="unit_time_millisecond">Миллисекунда</string>
     <string name="unit_time_week">Неделя</string>
     <string name="unit_time_year">Год</string>
-    <string name="faq_1_title">Как работает кнопка [C] (очистка)?</string>
-    <string name="faq_1_text">Нажатие на неё удалит один символ. Длительное нажатие сбросит все поля сразу.</string>
     <string name="unit_mass_pound">Фунт</string>
     <string name="unit_time_minute">Минута</string>
     <string name="unit_time_day">День</string>

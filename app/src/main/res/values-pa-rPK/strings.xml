@@ -3,8 +3,5 @@
     <string name="app_launcher_name">کیلکولیٹر</string>
     <string name="scientific_calculator">وگیانک کیلکولیٹر</string>
     <string name="formula_divide_by_zero_error">غلطی آئی اے، صفر نال ونڈ</string>
-    <string name="history">تریخ</string>
-    <string name="history_empty">تریخ چ کوئی نہیں اے</string>
-    <string name="clear_history">ہٹاؤ</string>
     <string name="history_cleared">تریخ ہٹائی گئی اے</string>
 </resources>

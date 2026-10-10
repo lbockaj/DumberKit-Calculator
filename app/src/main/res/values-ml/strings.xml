@@ -3,13 +3,8 @@
     <string name="app_launcher_name">കാൽക്കുലേറ്റർ</string>
     <string name="scientific_calculator">ശാസ്ത്രീയ കാൽക്കുലേറ്റർ</string>
     <string name="formula_divide_by_zero_error">പിശക്: 0 കൊണ്ട് ഹരിക്കാനാവില്ല</string>
-    <string name="history">ഹിസ്റ്ററി</string>
-    <string name="history_empty">ഹിസ്റ്ററിയിൽ ഒന്നുമില്ല</string>
-    <string name="clear_history">ക്ലിയർ ചെയുക</string>
     <string name="history_cleared">ഹിസ്റ്ററി മായ്ച്ചു കളഞ്ഞു</string>
     <string name="vibrate_on_button_press">ബട്ടൺ അമർത്തുമ്പോൾ വൈബ്രേറ്റ് ചെയ്യുക</string>
-    <string name="faq_1_title">C(ക്ലിയർ ) ബട്ടൺ പ്രവർത്തിക്കുന്നത് എങ്ങനെ\?</string>
-    <string name="faq_1_text">ടാപ്പ് ചെയ്യുമ്പോൾ ഒരു സമയം ഒരു പ്രതീകത്തെ നീക്കംചെയ്യും. ദീർഘനേരം അമർത്തിയാൽ എല്ലാ ഫീൽഡുകളും പുനഃസജ്ജമാക്കും.</string>
     <string name="unit_length_kilometer">കിലോമീറ്റർ</string>
     <string name="unit_length_meter">മീറ്റർ</string>
     <string name="unit_length_centimeter">സെന്റീമീറ്റർ</string>

@@ -5,9 +5,6 @@
     <string name="unit_converter">محول الوحدة</string>
     <string name="swap_units">تبديل الوحدات</string>
     <string name="formula_divide_by_zero_error">خطأ: القسمة على صفر</string>
-    <string name="history">التاريخ</string>
-    <string name="history_empty">التاريخ فارغ</string>
-    <string name="clear_history">مسح</string>
     <string name="history_cleared">تم مسح التاريخ</string>
     <string name="vibrate_on_button_press">الاهتزاز عند الضغط على الازرار</string>
     <string name="unit_length">المدى</string>
@@ -26,8 +23,6 @@
     <string name="unit_volume_cubic_meter">متر مكعب</string>
     <string name="unit_time_week">أسبوع</string>
     <string name="unit_time_year">السنة</string>
-    <string name="faq_1_title">كيف يعمل الزر C (مسح)؟</string>
-    <string name="faq_1_text">النقر على ذلك سوف يزيل حرف واحد في وقت واحد. الضغط لفترة طويلة سوف إعادة تعيين جميع الحقول في وقت واحد.</string>
     <string name="unit_length_angstrom">أنجستروم</string>
     <string name="unit_mass_milligram">ملليغرام</string>
     <string name="unit_volume_liter">لتر</string>

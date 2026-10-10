@@ -5,9 +5,6 @@
     <string name="unit_converter">Birim dönüştürücü</string>
     <string name="swap_units">Birimleri değiştir</string>
     <string name="formula_divide_by_zero_error">Hata: sıfıra bölme</string>
-    <string name="history">Geçmiş</string>
-    <string name="history_empty">Geçmiş boş</string>
-    <string name="clear_history">Temizle</string>
     <string name="history_cleared">Geçmiş temizlendi</string>
     <string name="vibrate_on_button_press">Düğmeye basıldığında titret</string>
     <string name="unit_length">Uzunluk</string>
@@ -77,8 +74,6 @@
     <string name="unit_time_millisecond">Milisaniye</string>
     <string name="unit_time_week">Hafta</string>
     <string name="unit_time_year">Yıl</string>
-    <string name="faq_1_title">C (Temizle) düğmesi nasıl çalışır?</string>
-    <string name="faq_1_text">Üzerine dokunmak, bir seferde bir karakteri kaldıracaktır. Uzun basma, tüm alanları bir kerede sıfırlayacaktır.</string>
     <string name="unit_length_mile">Mil</string>
     <string name="unit_length_yard">Yarda</string>
     <string name="unit_length_foot">Fit</string>

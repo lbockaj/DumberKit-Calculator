@@ -5,9 +5,6 @@
     <string name="unit_converter">单位换算</string>
     <string name="swap_units">交换单位</string>
     <string name="formula_divide_by_zero_error">错误：除数为零</string>
-    <string name="history">历史记录</string>
-    <string name="history_empty">历史记录为空</string>
-    <string name="clear_history">清除</string>
     <string name="history_cleared">已清除历史记录</string>
     <string name="vibrate_on_button_press">按下按钮时振动</string>
     <string name="unit_length">长度</string>
@@ -81,8 +78,6 @@
     <string name="unit_time_millisecond">毫秒</string>
     <string name="unit_time_week">周</string>
     <string name="unit_time_year">年</string>
-    <string name="faq_1_title">如何使用 C（清除）按钮？</string>
-    <string name="faq_1_text">点击会删除一个数字，长按会清除所有数字。</string>
     <string name="unit_volume">体积</string>
     <string name="unit_mass_pound">磅</string>
     <string name="unit_mass_dram">打兰</string>

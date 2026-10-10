@@ -22,7 +22,6 @@
     <string name="unit_converter">Conversor de unidades</string>
     <string name="unit_length_millimeter">Milímetros</string>
     <string name="unit_length_fathom">Fathom</string>
-    <string name="history">Histórico</string>
     <string name="unit_length_nautical_mile">Milhas náuticas</string>
     <string name="unit_area_square_millimeter">Milímetros quadrados</string>
     <string name="unit_volume_liter">Litros</string>
@@ -37,8 +36,6 @@
     <string name="unit_mass_carat">Quilates</string>
     <string name="unit_length_kilometer">Quilómetros</string>
     <string name="unit_mass_ounce">Onças</string>
-    <string name="history_empty">Histórico vazio</string>
-    <string name="clear_history">Limpar</string>
     <string name="unit_area_acre">Acres</string>
     <string name="unit_area_hectare">Hectares</string>
     <string name="history_cleared">O histórico foi limpo</string>
@@ -79,8 +76,6 @@
     <string name="unit_temperature_rankine">Rankine</string>
     <string name="unit_time_week">Semanas</string>
     <string name="unit_time_year">Anos</string>
-    <string name="faq_1_title">Como funciona o botão C (limpar)?</string>
-    <string name="faq_1_text">Ao tocar uma vez, os caracteres serão apagados um a um. Um toque longo apaga todos os caracteres de uma vez.</string>
     <string name="unit_length_parsec">Parsec</string>
     <string name="unit_volume_centiliter">Centilitros</string>
     <string name="unit_volume_deciliter">Decilitros</string>

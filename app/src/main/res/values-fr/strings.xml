@@ -5,9 +5,6 @@
     <string name="unit_converter">Convertisseur d\'unités</string>
     <string name="swap_units">Inverser les unités</string>
     <string name="formula_divide_by_zero_error">Erreur : division par zéro</string>
-    <string name="history">Historique</string>
-    <string name="history_empty">L\'historique est vide</string>
-    <string name="clear_history">Effacer</string>
     <string name="history_cleared">L\'historique a été effacé</string>
     <string name="vibrate_on_button_press">Vibrer lors de l\'appui sur une touche</string>
     <string name="unit_length">Longueur</string>
@@ -80,8 +77,6 @@
     <string name="unit_time_day">Jour</string>
     <string name="unit_time_week">Semaine</string>
     <string name="unit_time_year">Année</string>
-    <string name="faq_1_title">Comment le bouton C (Effacer) fonctionne-t-il \?</string>
-    <string name="faq_1_text">En appuyant dessus, vous effacerez un caractère à la fois. Un appui prolongé réinitialisera tous les champs d\'un seul coup.</string>
     <string name="unit_area_acre">Are</string>
     <string name="unit_temperature_kelvin">Kelvin</string>
     <string name="unit_temperature_fahrenheit">Fahrenheit</string>

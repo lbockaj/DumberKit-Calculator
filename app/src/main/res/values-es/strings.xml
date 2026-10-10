@@ -5,9 +5,6 @@
     <string name="unit_converter">Conversor de unidades</string>
     <string name="swap_units">Cambiar unidades</string>
     <string name="formula_divide_by_zero_error">Error: división por cero</string>
-    <string name="history">Historial</string>
-    <string name="history_empty">El historial está vacío</string>
-    <string name="clear_history">Borrar</string>
     <string name="history_cleared">El historial ha sido borrado</string>
     <string name="vibrate_on_button_press">Vibrar al presionar un botón</string>
     <string name="unit_length">Longitud</string>
@@ -76,8 +73,6 @@
     <string name="unit_time_millisecond">Milisegundo</string>
     <string name="unit_time_week">Semana</string>
     <string name="unit_time_year">Año</string>
-    <string name="faq_1_title">¿Cómo funciona el botón C (Borrar)\?</string>
-    <string name="faq_1_text">Presionándolo una vez eliminará un solo carácter. Mantenerlo presionado reiniciará todos los campos.</string>
     <string name="unit_time_day">Día</string>
     <string name="unit_time_minute">Minuto</string>
     <string name="unit_length_yard">Yarda</string>
