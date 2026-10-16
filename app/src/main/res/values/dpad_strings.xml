@@ -52,7 +52,7 @@
     <string name="dpad_key_converter_back_action">Delete the last digit; with nothing typed: close</string>
     <string name="dpad_key_converter_back_hold_action">Clear the value</string>
     <string name="dpad_about_tabs">All tabs</string>
-    <string name="dpad_key_tabs_back_action">In the converter and settings tabs: back to the calculator</string>
+    <string name="dpad_key_tabs_back_action">In the converter, currency and settings tabs: back to the calculator</string>
     <string name="dpad_copy_result">Copy the result</string>
     <string name="dpad_use_in_calculator">Use in the calculator</string>
     <string name="dpad_currency_converter">Currency converter</string>

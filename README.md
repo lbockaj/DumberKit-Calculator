@@ -9,8 +9,9 @@ under the screen. DumberKit: Calculator throws the button grid away: you type th
 keypad, the way [Calc-U-Later](https://github.com/kouta-kun/Calc-U-Later) does it, and press OK for the result.
 
 It's built on [Fossify Calculator](https://github.com/FossifyOrg/Calculator), so it keeps its themes, its history and
-its unit converter, reworked to fit a 480×640 screen and to work with the keys alone. Touch is switched off inside
-the app, so nothing gets pressed by accident in your pocket.
+its unit converter, reworked to fit a 480×640 screen and to work with the keys alone, and adds a currency converter
+with the European Central Bank's rates. Touch is switched off inside the app, so nothing gets pressed by accident in
+your pocket.
 
 <div align="center">
 <img alt="Typing a calculation" src="fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="19%">
@@ -24,7 +25,7 @@ the app, so nothing gets pressed by accident in your pocket.
 
 The app has four tabs – **Calculator**, **Unit converter**, **Currency converter** and **Settings** – shown as icons
 at the bottom. **← / →**
-switch between them, and **Back** in the converter or settings tab takes you back to the calculator.
+switch between them, and **Back** in the converter, currency or settings tab takes you back to the calculator.
 
 ### Calculator
 
@@ -128,7 +129,7 @@ colors, end with **Cancel** / **Save** rows instead of icons in the top bar.
   back.
 - **App icon** – blue by default, any other color can be picked; switching the theme doesn't change it.
 - **Allow touch input** – off by default. Turn it on if you'd like to use the touchscreen in the app too.
-- **Show key hints** – the short line of key hints at the bottom of the converter.
+- **Show key hints** – the short line of key hints at the bottom of the unit and currency converters.
 - **Vibrate on button press** and **Prevent phone from sleeping** while the app is open.
 - **About** – the version and a full list of the keys on every screen.
 

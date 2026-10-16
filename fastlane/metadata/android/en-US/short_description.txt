@@ -1,1 +1,1 @@
-Calculator and unit converter for keypad phones, typed on the keypad
+Calculator, unit and currency converter for keypad phones

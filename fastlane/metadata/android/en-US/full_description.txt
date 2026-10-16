@@ -1,4 +1,4 @@
-A calculator and unit converter for keypad phones like the Qin F21, Dumber Mini or Doov R77 Pro. There are no on-screen buttons: you type the calculation straight on the keypad and press OK for the result. Touch is switched off inside the app, so nothing gets pressed by accident in your pocket.
+A calculator, unit converter and currency converter for keypad phones like the Qin F21, Dumber Mini or Doov R77 Pro. There are no on-screen buttons: you type the calculation straight on the keypad and press OK for the result. Touch is switched off inside the app, so nothing gets pressed by accident in your pocket.
 
 <b>Keys</b>
 • 0–9 – type numbers

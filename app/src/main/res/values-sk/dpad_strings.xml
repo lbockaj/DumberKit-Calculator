@@ -40,7 +40,7 @@
     <string name="dpad_key_converter_back_action">Zmaže poslednú číslicu; keď nie je nič napísané: zavrie</string>
     <string name="dpad_key_converter_back_hold_action">Vymaže hodnotu</string>
     <string name="dpad_about_tabs">Všetky karty</string>
-    <string name="dpad_key_tabs_back_action">Na kartách prevodník a nastavenia: späť na kalkulačku</string>
+    <string name="dpad_key_tabs_back_action">Na kartách prevodník, meny a nastavenia: späť na kalkulačku</string>
     <string name="dpad_copy_result">Kopírovať výsledok</string>
     <string name="dpad_use_in_calculator">Použiť v kalkulačke</string>
     <string name="dpad_currency_converter">Prevod mien</string>
