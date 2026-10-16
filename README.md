@@ -119,6 +119,11 @@ hours old; nothing runs in the background. Without internet the converter keeps 
 copy that comes with the app covers the very first start. The line under the converter shows when the rates were
 last downloaded.
 
+<div align="center">
+<img alt="Converting euros to US dollars" src="fastlane/metadata/android/en-US/images/phoneScreenshots/11.png" width="19%">
+<img alt="List of currencies" src="fastlane/metadata/android/en-US/images/phoneScreenshots/12.png" width="19%">
+</div>
+
 ### Settings and colors
 
 Every option in *Settings* is a row you can reach with the arrows. Screens where changes need confirming, like the

@@ -14,7 +14,7 @@
     <string name="dpad_pick_color">Farba</string>
     <string name="dpad_pick_shade">Odtieň</string>
     <string name="dpad_about_version">Verzia %s</string>
-    <string name="dpad_about_description">Kalkulačka a prevodník jednotiek pre klávesnicové telefóny ako Qin F21, Dumber Mini alebo Doov R77 Pro. Všetko sa ovláda D-padom a klávesnicou, dotykovú obrazovku netreba.</string>
+    <string name="dpad_about_description">Kalkulačka, prevodník jednotiek a mien pre klávesnicové telefóny ako Qin F21, Dumber Mini alebo Doov R77 Pro. Všetko sa ovláda D-padom a klávesnicou, dotykovú obrazovku netreba.</string>
     <string name="dpad_about_shortcuts">Skratky klávesnice</string>
     <string name="dpad_about_license_title">Licencia</string>
     <string name="dpad_about_license">Slobodný softvér s otvoreným kódom pod licenciou GNU General Public License v3.0. Bez reklám a sledovania.</string>

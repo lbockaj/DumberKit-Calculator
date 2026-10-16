@@ -17,9 +17,9 @@
     <string name="dpad_pick_color">Color</string>
     <string name="dpad_pick_shade">Shade</string>
     <!-- about -->
-    <string name="dpad_about_app_name" translatable="false">DumberKit Calculator</string>
+    <string name="dpad_about_app_name" translatable="false">DumberKit: Calculator</string>
     <string name="dpad_about_version">Version %s</string>
-    <string name="dpad_about_description">A calculator and unit converter for keypad phones like the Qin F21, Dumber Mini or Doov R77 Pro. Everything works with the D-pad and the keypad, no touchscreen needed.</string>
+    <string name="dpad_about_description">A calculator, unit converter and currency converter for keypad phones like the Qin F21, Dumber Mini or Doov R77 Pro. Everything works with the D-pad and the keypad, no touchscreen needed.</string>
     <string name="dpad_about_shortcuts">Keypad shortcuts</string>
     <string name="dpad_about_license_title">License</string>
     <string name="dpad_about_license">Free and open source software under the GNU General Public License v3.0. No ads, no tracking.</string>
