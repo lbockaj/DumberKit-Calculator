@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.0] - 2026-10-16
+### Added
+- Currency converter tab (before Settings, dollar and yen icon): about 30 currencies at the European Central Bank's
+  reference rates, the same two rows and keys as the unit converter. The rates are downloaded when the tab opens and
+  the kept ones are a few hours old, or from the menu; offline the last ones stay, the time of the last download is shown
+  under the converter. The app now asks for internet access, used only for this
+### Fixed
+- The warning "You are using a fake version of the app", which Commons showed now and then, no longer shows up
+- The selected dialog button is much easier to see
+- On phones with an on-screen navigation bar the tabs and the last rows of About stay above it
+
 ## [1.0.0] - 2026-10-09
 First release, based on Fossify Calculator 1.4.0.
 

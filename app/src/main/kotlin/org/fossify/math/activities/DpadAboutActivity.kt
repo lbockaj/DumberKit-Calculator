@@ -47,13 +47,26 @@ class DpadAboutActivity : SimpleActivity() {
             R.string.dpad_key_star_hold to R.string.dpad_key_converter_star_hold_action,
             R.string.dpad_key_back to R.string.dpad_key_converter_back_action,
             R.string.dpad_key_back_hold to R.string.dpad_key_converter_back_hold_action
+        ),
+        R.string.dpad_currency_converter to listOf(
+            R.string.dpad_key_digits to R.string.dpad_key_currency_digits_action,
+            R.string.dpad_key_pound to R.string.dpad_key_calc_pound_action,
+            R.string.dpad_key_up_down to R.string.dpad_key_currency_up_down_action,
+            R.string.dpad_key_ok to R.string.dpad_key_currency_ok_action,
+            R.string.dpad_key_star to R.string.dpad_key_currency_star_action,
+            R.string.dpad_key_back to R.string.dpad_key_currency_back_action,
+            R.string.dpad_key_back_hold to R.string.dpad_key_converter_back_hold_action,
+            R.string.dpad_key_menu to R.string.dpad_key_currency_menu_action,
+            R.string.dpad_key_rates to R.string.dpad_key_currency_rates_action
         )
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        setupEdgeToEdge(padBottomSystem = listOf(binding.aboutNestedScrollview))
+        // a margin, not padding: Android's scroll views ignore their padding when they scroll to the focused row, the
+        // last rows ended up under the navigation bar
+        setupEdgeToEdge(moveBottomSystem = listOf(binding.aboutNestedScrollview))
 
         binding.aboutVersion.text = getString(R.string.dpad_about_version, BuildConfig.VERSION_NAME)
         // the icon in the color picked in the settings (the app's own default icon is the plain green one)

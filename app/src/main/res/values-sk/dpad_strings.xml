@@ -28,7 +28,7 @@
     <string name="dpad_key_calc_ok_action">Výsledok</string>
     <string name="dpad_key_calc_back_action">Zmaže posledný znak (výsledok celý); keď nie je nič napísané: zavrie</string>
     <string name="dpad_key_calc_back_hold_action">Vymaže všetko</string>
-    <string name="dpad_key_calc_left_action">Prepína karty: kalkulačka, prevodník jednotiek, nastavenia</string>
+    <string name="dpad_key_calc_left_action">Prepína karty: kalkulačka, prevodník jednotiek, meny, nastavenia</string>
     <string name="dpad_key_calc_up_down_action">Prechádzanie históriou, príklad sa dá upraviť a znova vypočítať</string>
     <string name="dpad_key_calc_menu_action">Ďalšie funkcie, vymazať históriu</string>
     <string name="dpad_key_converter_digits_action">Píše hornú hodnotu, dolná sa vypočíta</string>
@@ -43,4 +43,18 @@
     <string name="dpad_key_tabs_back_action">Na kartách prevodník a nastavenia: späť na kalkulačku</string>
     <string name="dpad_copy_result">Kopírovať výsledok</string>
     <string name="dpad_use_in_calculator">Použiť v kalkulačke</string>
+    <string name="dpad_currency_converter">Prevod mien</string>
+    <string name="dpad_hint_currency">OK zoznam · * vymeniť · # čiarka</string>
+    <string name="dpad_rates_from">Kurzy ECB z %s</string>
+    <string name="dpad_rates_update_failed">Kurzy sa nepodarilo stiahnuť, zostávajú posledné</string>
+    <string name="dpad_update_rates">Aktualizovať kurzy</string>
+    <string name="dpad_swap_currencies">Vymeniť meny</string>
+    <string name="dpad_key_currency_digits_action">Píše sumu vo vybranom riadku, druhý sa prepočíta</string>
+    <string name="dpad_key_currency_up_down_action">Výber hornej alebo dolnej meny</string>
+    <string name="dpad_key_currency_ok_action">Zoznam všetkých mien</string>
+    <string name="dpad_key_currency_star_action">Vymení meny</string>
+    <string name="dpad_key_currency_back_action">Zmaže poslednú číslicu; keď nie je nič napísané: späť na kalkulačku</string>
+    <string name="dpad_key_currency_menu_action">Vymeniť, aktualizovať kurzy, použiť v kalkulačke, vymazať</string>
+    <string name="dpad_key_currency_rates_action">Kurzy ECB, obnovia sa pri otvorení karty (s odstupom pár hodín); bez internetu zostávajú posledné</string>
+    <string name="dpad_key_rates">Kurzy</string>
 </resources>

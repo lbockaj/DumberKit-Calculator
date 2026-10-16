@@ -111,6 +111,11 @@
         android:visibility="gone" />
 
     <include
+        android:id="@+id/currency_page"
+        layout="@layout/page_currency"
+        android:visibility="gone" />
+
+    <include
         android:id="@+id/settings_page"
         layout="@layout/page_settings"
         android:visibility="gone" />

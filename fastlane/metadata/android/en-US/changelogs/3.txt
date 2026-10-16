@@ -1,0 +1,3 @@
+• New currency converter with the European Central Bank's rates, works offline with the last ones
+• No more "fake version" warnings
+• The selected dialog button is easier to see

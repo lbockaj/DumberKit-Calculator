@@ -10,6 +10,7 @@
     <dimen name="dpad_expression_min_height">56dp</dimen>
     <dimen name="dpad_preview_text_size">18sp</dimen>
     <dimen name="dpad_hint_text_size">12sp</dimen>
+    <dimen name="dpad_currency_status_text_size">14sp</dimen>
     <dimen name="dpad_history_formula_size">14sp</dimen>
     <dimen name="dpad_history_result_size">17sp</dimen>
     <!-- hold *: the square tiles of the symbol palette -->

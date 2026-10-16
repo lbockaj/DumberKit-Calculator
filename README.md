@@ -22,7 +22,8 @@ the app, so nothing gets pressed by accident in your pocket.
 
 ## Using it with the keys
 
-The app has three tabs – **Calculator**, **Unit converter** and **Settings** – shown as icons at the bottom. **← / →**
+The app has four tabs – **Calculator**, **Unit converter**, **Currency converter** and **Settings** – shown as icons
+at the bottom. **← / →**
 switch between them, and **Back** in the converter or settings tab takes you back to the calculator.
 
 ### Calculator
@@ -96,6 +97,27 @@ both directions.
 <img alt="About" src="fastlane/metadata/android/en-US/images/phoneScreenshots/10.png" width="19%">
 </div>
 
+### Currency converter
+
+The same two rows as the unit converter, with about 30 currencies (euro, dollar, pound, franc, koruna, złoty, forint,
+yen…) at the reference rates of the European Central Bank. The ECB publishes them once per working day, around
+16:00 CET.
+
+| Key | What it does |
+| --- | --- |
+| **↑ / ↓** | Select the upper or lower currency |
+| **0–9**, **#** | Type the amount of the selected row, the other one is converted |
+| **OK** | The list of all currencies for the selected row |
+| **\*** | Swap the two currencies |
+| **Back** | Delete the last digit; with nothing typed it goes back to the calculator |
+| **Hold Back** | Clear the amount |
+| **Menu** | Swap, update the rates, use the result in the calculator, clear |
+
+The rates are downloaded when you open the tab, if there's an internet connection and the ones on the phone are a few
+hours old; nothing runs in the background. Without internet the converter keeps working with the last rates, and a
+copy that comes with the app covers the very first start. The line under the converter shows when the rates were
+last downloaded.
+
 ### Settings and colors
 
 Every option in *Settings* is a row you can reach with the arrows. Screens where changes need confirming, like the
@@ -115,7 +137,7 @@ colors, end with **Cancel** / **Save** rows instead of icons in the top bar.
 - Numbers are shown the way your phone's language writes them, with spaces or commas between thousands.
 - Very big and very small results switch to the 1.2E+20 form instead of filling the screen with zeros.
 - The menu can copy the result, ready to paste into a text message.
-- No ads, no tracking and no internet access.
+- No ads and no tracking. The internet is used only to download the ECB's currency rates.
 - Portrait only, sized for small screens. The calculator's own texts come with Fossify's translations into many
   languages; the keypad texts are in English and Slovak for now.
 

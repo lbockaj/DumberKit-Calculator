@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The ECB's server (currency rates, helpers/CurrencyRates.kt) is signed by Sectigo's newer root E46 (2021), which
+  Android 14 and older don't know yet, so the download failed there. That root (from Mozilla's CA list, SHA-256
+  C9:0F:26:F0:…:0C:53:83) is trusted for this one server only, next to the system's own certificates.
+-->
+<network-security-config>
+    <domain-config>
+        <domain includeSubdomains="false">www.ecb.europa.eu</domain>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="@raw/sectigo_root_e46" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

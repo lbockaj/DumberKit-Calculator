@@ -25,6 +25,7 @@ import org.fossify.math.helpers.applyDpadFocusHighlight
 import org.fossify.math.helpers.dpadCompactTopBar
 import org.fossify.math.helpers.ignoreTouches
 import org.fossify.math.helpers.keepIconColorWithThemes
+import org.fossify.math.helpers.removeModdedAppWarning
 
 private const val BLUE_ICON_SET = "dumberkit_blue_icon"
 private const val ICON_ALIASES_RENAMED = "dumberkit_icon_aliases_renamed"
@@ -61,7 +62,10 @@ class App : FossifyApp() {
                     activity.keepIconColorWithThemes()
                 }
             }
-            override fun onActivityStarted(activity: Activity) {}
+            override fun onActivityStarted(activity: Activity) {
+                // shown by Commons in the screen's onCreate, see ModdedAppWarning.kt
+                activity.removeModdedAppWarning()
+            }
             override fun onActivityPaused(activity: Activity) {}
             override fun onActivityStopped(activity: Activity) {}
             override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}

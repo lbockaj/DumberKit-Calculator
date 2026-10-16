@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The currency tab: the same two rows as the unit converter, under them when the ECB rates in use were downloaded -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/currency_holder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/currency_converter"
+        layout="@layout/view_converter"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/currency_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.7"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingStart="@dimen/activity_margin"
+        android:paddingEnd="@dimen/activity_margin"
+        android:paddingBottom="@dimen/small_margin"
+        android:textSize="@dimen/dpad_currency_status_text_size" />
+
+    <TextView
+        android:id="@+id/currency_key_hints"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.6"
+        android:gravity="center"
+        android:maxLines="2"
+        android:paddingStart="@dimen/small_margin"
+        android:paddingTop="@dimen/tiny_margin"
+        android:paddingEnd="@dimen/small_margin"
+        android:paddingBottom="@dimen/small_margin"
+        android:text="@string/dpad_hint_currency"
+        android:textSize="@dimen/dpad_hint_text_size" />
+
+</LinearLayout>

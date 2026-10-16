@@ -14,6 +14,19 @@ class Config(context: Context) : BaseConfig(context) {
         get() = prefs.getBoolean(DPAD_TOUCH_ENABLED, false)
         set(dpadTouchEnabled) = prefs.edit().putBoolean(DPAD_TOUCH_ENABLED, dpadTouchEnabled).apply()
 
+    /** The last downloaded ECB rates as "USD=1.1188;JPY=176.91", see [CurrencyRates]. */
+    var dpadCurrencyRates: String
+        get() = prefs.getString(DPAD_CURRENCY_RATES, "")!!
+        set(dpadCurrencyRates) = prefs.edit().putString(DPAD_CURRENCY_RATES, dpadCurrencyRates).apply()
+
+    var dpadCurrencyRatesDate: String
+        get() = prefs.getString(DPAD_CURRENCY_RATES_DATE, "")!!
+        set(dpadCurrencyRatesDate) = prefs.edit().putString(DPAD_CURRENCY_RATES_DATE, dpadCurrencyRatesDate).apply()
+
+    var dpadCurrencyRatesCheckedAt: Long
+        get() = prefs.getLong(DPAD_CURRENCY_RATES_CHECKED_AT, 0)
+        set(dpadCurrencyRatesCheckedAt) = prefs.edit().putLong(DPAD_CURRENCY_RATES_CHECKED_AT, dpadCurrencyRatesCheckedAt).apply()
+
     var dpadShowKeyHints: Boolean
         get() = prefs.getBoolean(DPAD_SHOW_KEY_HINTS, true)
         set(dpadShowKeyHints) = prefs.edit().putBoolean(DPAD_SHOW_KEY_HINTS, dpadShowKeyHints).apply()

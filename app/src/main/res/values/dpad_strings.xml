@@ -40,7 +40,7 @@
     <string name="dpad_key_calc_ok_action">Result</string>
     <string name="dpad_key_calc_back_action">Delete the last character (a result at once); with nothing typed: close</string>
     <string name="dpad_key_calc_back_hold_action">Clear everything</string>
-    <string name="dpad_key_calc_left_action">Switch the tabs: calculator, unit converter, settings</string>
+    <string name="dpad_key_calc_left_action">Switch the tabs: calculator, unit converter, currencies, settings</string>
     <string name="dpad_key_calc_up_down_action">Go through the history, the calculation can be changed and computed again</string>
     <string name="dpad_key_calc_menu_action">More functions, clear history</string>
     <string name="dpad_key_converter_digits_action">Type the upper value, the lower one is computed</string>
@@ -55,4 +55,18 @@
     <string name="dpad_key_tabs_back_action">In the converter and settings tabs: back to the calculator</string>
     <string name="dpad_copy_result">Copy the result</string>
     <string name="dpad_use_in_calculator">Use in the calculator</string>
+    <string name="dpad_currency_converter">Currency converter</string>
+    <string name="dpad_hint_currency">OK all currencies · * swap · # decimal</string>
+    <string name="dpad_rates_from">ECB rates from %s</string>
+    <string name="dpad_rates_update_failed">Couldn\'t download the rates, the last ones stay</string>
+    <string name="dpad_update_rates">Update the rates</string>
+    <string name="dpad_swap_currencies">Swap currencies</string>
+    <string name="dpad_key_currency_digits_action">Type the amount of the selected row, the other one is converted</string>
+    <string name="dpad_key_currency_up_down_action">Pick the upper or lower currency</string>
+    <string name="dpad_key_currency_ok_action">List of all currencies</string>
+    <string name="dpad_key_currency_star_action">Swap the currencies</string>
+    <string name="dpad_key_currency_back_action">Delete the last digit; with nothing typed: back to the calculator</string>
+    <string name="dpad_key_currency_menu_action">Swap, update the rates, use in the calculator, clear</string>
+    <string name="dpad_key_currency_rates_action">ECB rates, updated when the tab opens (a few hours apart); offline the last ones stay</string>
+    <string name="dpad_key_rates">Rates</string>
 </resources>

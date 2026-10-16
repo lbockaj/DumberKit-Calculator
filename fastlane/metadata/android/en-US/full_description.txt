@@ -8,14 +8,15 @@ A calculator and unit converter for keypad phones like the Qin F21, Dumber Mini 
 • OK or Call – show the result
 • Back – delete the last character; hold it to clear everything
 • ↑ / ↓ – go through the history
-• ← / → – switch between Calculator, Unit converter and Settings
+• ← / → – switch between Calculator, Unit converter, Currency converter and Settings
 
 <b>Features</b>
 • The usual order of operations and exact decimals (0.1 + 0.2 = 0.3)
 • History like a paper tape, cleared when you close the app
 • Unit converter for length, area, volume, mass, temperature, time, speed, pressure and energy, in both directions
+• Currency converter with about 30 currencies at the European Central Bank's rates, works offline with the last ones
 • Copy the result, or take a converted value over to the calculator
 • System, light, dark, dark red and custom themes, a keypad-friendly color picker, blue or any other icon color
-• No ads, no tracking, no internet access
+• No ads, no tracking; internet only for the ECB's currency rates
 
 Based on Fossify Calculator (GPL-3.0), keypad input inspired by Calc-U-Later.

@@ -32,6 +32,9 @@ interface Converter {
         return ValueWithUnit(to.fromBase(from.unit.toBase(from.value)), to)
     }
 
+    /** The computed value as shown, e.g. money in cents instead of 15 decimals. */
+    fun roundResult(value: BigDecimal): BigDecimal = value
+
     open class Unit(
         val nameResId: Int,
         val symbolResId: Int,
@@ -44,10 +47,15 @@ interface Converter {
 
         fun withValue(value: BigDecimal) = ValueWithUnit(value, this)
 
+        /** Units with names that aren't app texts (currencies) override these two. */
+        open fun displayName(context: Context): String = context.getString(nameResId)
+
+        open fun displaySymbol(context: Context): String = context.getString(symbolResId)
+
         fun getNameWithSymbol(context: Context) = context.getString(
             R.string.unit_name_with_symbol_format,
-            context.getString(nameResId),
-            context.getString(symbolResId)
+            displayName(context),
+            displaySymbol(context)
         )
     }
 }

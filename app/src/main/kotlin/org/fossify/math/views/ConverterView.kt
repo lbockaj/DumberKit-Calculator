@@ -85,6 +85,14 @@ class ConverterView @JvmOverloads constructor(
         updateColors()
     }
 
+    /** New rates of the same currencies: the picked units and the typed value stay, the result is computed again. */
+    fun replaceConverter(converter: Converter) {
+        val top = converter.units.firstOrNull { it.key == topUnit?.key } ?: converter.defaultTopUnit
+        val bottom = converter.units.firstOrNull { it.key == bottomUnit?.key } ?: converter.defaultBottomUnit
+        this.converter = converter
+        updateUnits(top, bottom)
+    }
+
     fun setConverter(converter: Converter) {
         this.converter = converter
         topUnit = converter.defaultTopUnit
@@ -293,11 +301,11 @@ class ConverterView @JvmOverloads constructor(
     }
 
     private fun updateUnitLabelsAndSymbols() {
-        binding.topUnitName.text = topUnit?.nameResId?.let { context.getString(it) }
-        binding.bottomUnitName.text = bottomUnit?.nameResId?.let { context.getString(it) }
+        binding.topUnitName.text = topUnit?.displayName(context)
+        binding.bottomUnitName.text = bottomUnit?.displayName(context)
 
-        binding.topUnitSymbol.text = topUnit?.symbolResId?.let { context.getString(it) }
-        binding.bottomUnitSymbol.text = bottomUnit?.symbolResId?.let { context.getString(it) }
+        binding.topUnitSymbol.text = topUnit?.displaySymbol(context)
+        binding.bottomUnitSymbol.text = bottomUnit?.displaySymbol(context)
 
         binding.topUnitSymbol.layoutParams.width = LayoutParams.WRAP_CONTENT
         binding.bottomUnitSymbol.layoutParams.width = LayoutParams.WRAP_CONTENT
@@ -353,7 +361,7 @@ class ConverterView @JvmOverloads constructor(
             }
 
             // For unit conversion, now using BigDecimal throughout
-            val converted = convert(inputUnit!!.withValue(inputValue), outputUnit!!).value
+            val converted = roundResult(convert(inputUnit!!.withValue(inputValue), outputUnit!!).value)
             outputText.text = formatter.bigDecimalToString(converted)
         }
     }

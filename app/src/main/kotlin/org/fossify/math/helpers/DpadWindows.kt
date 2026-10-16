@@ -1,5 +1,6 @@
 package org.fossify.math.helpers
 
+import android.content.res.ColorStateList
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AbsListView
@@ -10,13 +11,15 @@ import android.widget.NumberPicker
 import android.widget.ScrollView
 import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.RecyclerView
+import org.fossify.commons.extensions.getProperTextColor
 import org.fossify.math.R
 
 /**
  * Dialogs from Commons (radio lists, sort options, alarm sounds…) were made for touch: their rows don't show the
  * focus and the focus starts on a button. Every new dialog window is prepared once (see NoTouch.kt): clickable rows
  * get the focus highlight, and if nothing else was focused yet, the checked option (or the first row) gets the focus.
- * Dialog buttons keep their own style, our own dialogs set up their focus themselves.
+ * Dialog buttons keep their own style (dpad_dialog_buttons.xml), only the focused one gets the text color: its label
+ * in the primary color was hard to read on the tinted background. Our own dialogs set up their focus themselves.
  */
 fun prepareWindowForKeys(root: View) {
     val rows = ArrayList<View>()
@@ -32,6 +35,16 @@ fun prepareWindowForKeys(root: View) {
 
         // radio buttons and checkboxes are buttons too, the dialog's own buttons are not rows
         val isDialogButton = view is Button && view !is CompoundButton
+        if (isDialogButton && view.getTag(R.id.dpad_focus_prepared) == null) {
+            val button = view as Button
+            button.setTag(R.id.dpad_focus_prepared, true)
+            button.setTextColor(
+                ColorStateList(
+                    arrayOf(intArrayOf(android.R.attr.state_focused), intArrayOf()),
+                    intArrayOf(button.context.getProperTextColor(), button.currentTextColor)
+                )
+            )
+        }
         if (view.isClickable && !isDialogButton && view !is EditText && view.getTag(R.id.dpad_focus_prepared) == null) {
             rows.add(view)
         }

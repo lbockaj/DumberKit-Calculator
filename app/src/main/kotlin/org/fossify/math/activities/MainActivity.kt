@@ -47,11 +47,13 @@ import org.fossify.math.helpers.dpadCompactTopBar
 import org.fossify.math.helpers.getDecimalSeparator
 import org.fossify.math.helpers.dpadPopupMenu
 import org.fossify.math.models.History
+import org.fossify.math.pages.CurrencyPage
 import org.fossify.math.pages.SettingsPage
 import org.fossify.math.pages.UnitTypesPage
 
 /**
- * Three tabs like in DumberKit Contacts, ←/→ switch them: the calculator, the unit converter and the settings.
+ * Four tabs like in DumberKit Contacts, ←/→ switch them: the calculator, the unit converter, the currency converter
+ * and the settings.
  *
  * The calculator is typed on the keypad like Calc-U-Later: digits directly, '*' an operator (each further press the
  * next one: + − × ÷), '#' the decimal point, OK the result, Back deletes. Hold '*' for %, ^, √, parentheses and ±.
@@ -64,6 +66,7 @@ class MainActivity : SimpleActivity() {
     private lateinit var expressionAutofit: AutofitHelper
     private lateinit var unitTypesPage: UnitTypesPage
     private lateinit var settingsPage: SettingsPage
+    private lateinit var currencyPage: CurrencyPage
     private var currentTab = TAB_CALCULATOR
 
     /** Error shown in place of the preview after OK, until the next key. */
@@ -80,9 +83,17 @@ class MainActivity : SimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         appLaunched(BuildConfig.APPLICATION_ID)
-        setupEdgeToEdge(padBottomSystem = listOf(binding.mainTabsHolder))
+        // a margin, not padding: the tabs have a fixed height, padding squeezed them under the navigation bar
+        setupEdgeToEdge(moveBottomSystem = listOf(binding.mainTabsHolder))
         unitTypesPage = UnitTypesPage(this, binding.unitTypesPage)
         settingsPage = SettingsPage(this, binding.settingsPage)
+        currencyPage = CurrencyPage(
+            activity = this,
+            binding = binding.currencyPage,
+            menuAnchor = binding.mainToolbar,
+            onLeave = { showTab(TAB_CALCULATOR) },
+            onUseInCalculator = { useInCalculator(CalculatorInput.toExpressionText(it)) }
+        )
         setupTabs()
         showTab(savedInstanceState?.getInt(CURRENT_TAB) ?: TAB_CALCULATOR)
 
@@ -124,6 +135,7 @@ class MainActivity : SimpleActivity() {
         historyAdapter.notifyItemRangeChanged(0, historyAdapter.itemCount)
         unitTypesPage.refresh()
         settingsPage.refresh()
+        currencyPage.refresh()
         setupTabColors()
         focusCurrentTab()
 
@@ -205,6 +217,7 @@ class MainActivity : SimpleActivity() {
         currentTab = tab
         binding.mainHolder.beVisibleIf(tab == TAB_CALCULATOR)
         binding.unitTypesPage.root.beVisibleIf(tab == TAB_CONVERTER)
+        binding.currencyPage.root.beVisibleIf(tab == TAB_CURRENCY)
         binding.settingsPage.root.beVisibleIf(tab == TAB_SETTINGS)
         binding.mainToolbar.setTitle(TAB_TITLES[tab])
         binding.mainTabsHolder.getTabAt(tab)?.takeIf { !it.isSelected }?.select()
@@ -226,6 +239,7 @@ class MainActivity : SimpleActivity() {
         binding.root.post {
             when (currentTab) {
                 TAB_CONVERTER -> unitTypesPage.focus()
+                TAB_CURRENCY -> currencyPage.onShown()
                 TAB_SETTINGS -> settingsPage.focus()
                 // the calculator takes all keys itself, nothing on it is focused
                 else -> currentFocus?.clearFocus()
@@ -235,6 +249,9 @@ class MainActivity : SimpleActivity() {
 
     /** Keys of the converter and settings tabs: their rows move with ↑/↓ and open with OK as usual. */
     private fun dispatchOtherTabKey(event: KeyEvent): Boolean {
+        if (currentTab == TAB_CURRENCY && currencyPage.onKey(event)) {
+            return true
+        }
         val isUp = event.action == KeyEvent.ACTION_UP && !event.isCanceled
         return when (event.keyCode) {
             KeyEvent.KEYCODE_BACK -> {
@@ -522,7 +539,11 @@ class MainActivity : SimpleActivity() {
     /** "Použiť v kalkulačke" in a converter: the converted value comes here like a result, ready to compute with. */
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
-        val value = intent.getStringExtra(EXTRA_VALUE) ?: return
+        intent.getStringExtra(EXTRA_VALUE)?.let { useInCalculator(it) }
+    }
+
+    /** A converted value (expression text) as a result on the calculator tab, ready to compute with. */
+    private fun useInCalculator(value: String) {
         stopBrowsingHistory()
         errorMessage = null
         input = CalculatorInput(value, evaluated = true)
@@ -555,14 +576,21 @@ class MainActivity : SimpleActivity() {
         const val EXTRA_VALUE = "dpad_value"
         private const val TAB_CALCULATOR = 0
         private const val TAB_CONVERTER = 1
-        private const val TAB_SETTINGS = 2
+        private const val TAB_CURRENCY = 2
+        private const val TAB_SETTINGS = 3
         private const val CURRENT_TAB = "current_tab"
         private val TAB_ICONS = listOf(
             R.drawable.ic_calculator_vector,
             R.drawable.ic_square_foot_vector,
+            R.drawable.ic_currency_vector,
             org.fossify.commons.R.drawable.ic_settings_cog_vector
         )
-        private val TAB_TITLES = listOf(R.string.app_launcher_name, R.string.unit_converter, org.fossify.commons.R.string.settings)
+        private val TAB_TITLES = listOf(
+            R.string.app_launcher_name,
+            R.string.unit_converter,
+            R.string.dpad_currency_converter,
+            org.fossify.commons.R.string.settings
+        )
 
         private const val MIN_EXPRESSION_TEXT_SIZE = 20f
         private const val EMPTY_ALPHA = 0.4f
